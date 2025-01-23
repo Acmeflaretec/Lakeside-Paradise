@@ -83,7 +83,7 @@
 }
 
 .TopBtn {
-    background: #ee7133;
+    background: #138cec;
     font-size: 11px !important;
     padding: 5px 10px;
     border-radius: 5px;
@@ -136,7 +136,7 @@
 }
 
 .dreamit-section-title span {
-    color: #ee7133;
+    color: #138cec;
 }
 
 .dreamit-section-title h5 {
@@ -184,7 +184,7 @@
     height: 10px;
     width: 10px;
     border-radius: 50%;
-    background: #ee7133;
+    background: #138cec;
     animation-duration: 3s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
@@ -208,7 +208,7 @@
     height: 9px;
     width: 9px;
     border-radius: 50%;
-    background: #ee7133;
+    background: #138cec;
     animation-duration: 3s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
@@ -253,7 +253,7 @@
     color: #fff !important;
     font-size: 18px;
     font-weight: 600;
-    background: linear-gradient(to right, #ee7133, #ee7133, 50%, #fff 50%);
+    background: linear-gradient(to right, #138cec, #138cec, 50%, #fff 50%);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-size: 200%, 100%;
@@ -261,7 +261,7 @@
 }
 
 .sticky.style-three .dreamit_menu>ul>li>a {
-    background: linear-gradient(to right, #ee7133, #ee7133, 50%, #1c1c24 50%);
+    background: linear-gradient(to right, #138cec, #138cec, 50%, #1c1c24 50%);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-size: 200%, 100%;
@@ -361,7 +361,7 @@ nav .dreamit_menu span {
     transition: 0.5s;
     opacity: 0;
     visibility: hidden;
-    border-top: 2px solid #ee7133;
+    border-top: 2px solid #138cec;
 }
 
 .dreamit_menu ul li:hover>.sub-menu {
@@ -395,7 +395,7 @@ nav .dreamit_menu span {
 .dreamit_menu ul .sub-menu .sub-menu li:hover>a,
 .dreamit_menu ul .sub-menu .sub-menu .sub-menu li:hover>a,
 .dreamit_menu ul .sub-menu .sub-menu .sub-menu .sub-menu li:hover>a {
-    background: #ee7133;
+    background: #138cec;
     color: #fff !important;
 }
 
@@ -467,7 +467,7 @@ nav .dreamit_menu span {
 .header-button .dtbtn {
     position: relative;
     z-index: 1;
-    background: #ee7133;
+    background: #138cec;
     color: #fff;
     cursor: pointer;
     display: inline-block;
@@ -537,7 +537,7 @@ nav .dreamit_menu span {
 
 .dreamit_nav_manu.sticky a.dtbtn {
     color: #fff;
-    background: #ee7133;
+    background: #138cec;
 }
 
 .dreamit_nav_manu.sticky a.dtbtn:hover {
@@ -705,7 +705,7 @@ nav .dreamit_menu span {
 
 .blog_list .owl-next i,
 .blog_list .owl-prev i {
-    background-color: #ee7133;
+    background-color: #138cec;
     border-radius: 3px;
     height: 48px;
     width: 48px;
@@ -742,7 +742,7 @@ nav .dreamit_menu span {
 
 .blog_list2 .owl-next i,
 .blog_list2 .owl-prev i {
-    background-color: #ee7133;
+    background-color: #138cec;
     border-radius: 3px;
     height: 48px;
     width: 48px;
@@ -818,7 +818,7 @@ nav .dreamit_menu span {
     margin-top: -200px;
     border-radius: 50%;
     text-align: center;
-    background-color: #ee7133;
+    background-color: #138cec;
     width: 70px;
     cursor: pointer;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
@@ -911,7 +911,7 @@ nav .dreamit_menu span {
     background: transparent;
     text-align: center;
     font-size: 24px;
-    color: #ee7133;
+    color: #138cec;
     padding: 0;
     cursor: pointer;
     -webkit-transition: all 500ms ease;
@@ -953,7 +953,7 @@ nav .dreamit_menu span {
 
 .search-box-btn i {
     display: inline-block;
-    background: #ee7133;
+    background: #138cec;
     color: #000;
     height: 30px;
     width: 30px;
@@ -1010,7 +1010,7 @@ button.close-search i {
 
 .index2-slider-area .slider-content .heading .box {
     position: absolute;
-    border: 6px solid #ee7133;
+    border: 6px solid #138cec;
     border-right: none;
     left: 0;
     top: 50%;
@@ -1020,11 +1020,11 @@ button.close-search i {
 }
 
 .index2-slider-area .slider-content span {
-    color: #ee7133;
+    color: #138cec;
 }
 
 .index2-slider-area .slider-content .index2-slider-button a {
-    background-color: #ee7133;
+    background-color: #138cec;
     color: #fff;
     padding: 18px 36px;
     display: inline-block;
@@ -1088,7 +1088,7 @@ button.close-search i {
 .list {
     font-size: 22px;
     font-weight: bold;
-    color: #ee7133; /* Highlighted color for emphasis */
+    color: #138cec; /* Highlighted color for emphasis */
     background: linear-gradient(90deg, rgba(238,113,51,0.1), rgba(238,113,51,0.1));
     padding: 10px 20px;
     border-radius: 8px;
@@ -1103,7 +1103,7 @@ button.close-search i {
 
 .list:hover {
     color: #fff; /* Change text color on hover */
-    background: #ee7133; /* Solid color on hover */
+    background: #138cec; /* Solid color on hover */
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
     transform: translateY(-3px); /* Slight lift effect */
 }
@@ -1135,7 +1135,7 @@ button.close-search i {
 
 .intro-section .right-content h4 {
     font-size: 16px;
-    color: #ee7133;
+    color: #138cec;
     margin-top: 0px;
 }
 
@@ -1147,7 +1147,7 @@ button.close-search i {
 }
 
 .intro-section .right-content span {
-    color: #ee7133;
+    color: #138cec;
 }
 
 .intro-section .right-content p {
@@ -1161,7 +1161,7 @@ button.close-search i {
 }
 
 .intro-section .right-content .icon i {
-    color: #ee7133;
+    color: #138cec;
     margin-right: 15px;
 }
 
@@ -1170,7 +1170,7 @@ button.close-search i {
 }
 
 .intro-section .right-content .index2-button a {
-    background: #ee7133;
+    background: #138cec;
     color: #fff;
     padding: 15px 40px;
     position: relative;
@@ -1229,7 +1229,7 @@ button.close-search i {
 }
 
 .index2-service-section .service-title h4 {
-    color: #ee7133;
+    color: #138cec;
     font-size: 16px;
 }
 
@@ -1240,14 +1240,14 @@ button.close-search i {
 }
 
 .index2-service-section .service-title span {
-    color: #ee7133;
+    color: #138cec;
 }
 
 .index2-service-section .service-title .index2-button a {
     background-color: #fff;
-    color: #ee7133;
+    color: #138cec;
     padding: 15px 40px;
-    border: 1px solid #ee7133;
+    border: 1px solid #138cec;
     position: relative;
     z-index: 1;
     display: inline-block;
@@ -1303,12 +1303,12 @@ button.close-search i {
     background-color: #2e2e2e; /* Optional: Active tab styling */
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .unit-plan-section {
       display: none;
     }
   }
-  
+   */
 
 .index2-service-section .accordion .accordion-tabs button {
     padding: 0px 5px;
@@ -1403,7 +1403,7 @@ button.close-search i {
 
 .index2-service-section .single-protfolio .protfolio-image .text-box p {
     font-size: 15px;
-    color: #ee7133;
+    color: #138cec;
     margin-bottom: 0px;
     transition: 0.5s;
 }
@@ -1415,7 +1415,7 @@ button.close-search i {
 }
 
 .index2-service-section .single-protfolio .single_portfolio_icon a i:hover {
-    color: #ee7133;
+    color: #138cec;
 }
 
 .index2-service-section .single-protfolio:hover .protfolio-image:before {
@@ -1464,7 +1464,7 @@ button.close-search i {
 }
 
 .index2-service-section .accordion .accordion-content .left-content .list .icon i {
-    color: #ee7133;
+    color: #138cec;
     font-size: 20px;
 }
 
@@ -1475,7 +1475,7 @@ button.close-search i {
 .index2-service-section .accordion .accordion-content .left-content .button a {
     font-size: 16px;
     color: #fff;
-    background-color: #ee7133;
+    background-color: #138cec;
     padding: 15px 30px;
     border-radius: 4px;
     margin-top: 20px;
@@ -1598,7 +1598,7 @@ h4.accordion-item__label {
     .accorSection #style-2::-webkit-scrollbar-thumb {
         border-radius: 10px;
         -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
-        background-color: #ee7133;
+        background-color: #138cec;
     }
     .accordion-tabs .accordion-tab {
         background: #000;
@@ -1786,7 +1786,7 @@ h4.accordion-item__label {
 
 .protfolio-section .protfolio-title h4 {
     font-size: 16px;
-    color: #ee7133;
+    color: #138cec;
 }
 
 .protfolio-section .protfolio-title h2 {
@@ -1795,7 +1795,7 @@ h4.accordion-item__label {
 }
 
 .protfolio-section .protfolio-title span {
-    color: #ee7133;
+    color: #138cec;
 }
 
 /* .protfolio-section .portfolio_nav{
@@ -1858,7 +1858,7 @@ h4.accordion-item__label {
     width: 66px;
     height: 66px;
     line-height: 70px;
-    background: #ee7133;
+    background: #138cec;
     text-align: center;
     font-size: 25px;
     display: inline-block;
@@ -1879,7 +1879,7 @@ h4.accordion-item__label {
 
 .protfolio-section .single-protfolio .protfolio-image .text-box p {
     font-size: 15px;
-    color: #ee7133;
+    color: #138cec;
     margin-bottom: 0px;
     transition: 0.5s;
 }
@@ -1950,7 +1950,7 @@ h4.accordion-item__label {
 
 .index2-about-section .right-content h4 {
     font-size: 16px;
-    color: #ee7133;
+    color: #138cec;
 }
 
 .index2-about-section .right-content h2 {
@@ -1962,7 +1962,7 @@ h4.accordion-item__label {
 }
 
 .index2-about-section .right-content span {
-    color: #ee7133;
+    color: #138cec;
 }
 
 .index2-about-section .right-content p {
@@ -2038,7 +2038,7 @@ h4.accordion-item__label {
 
 .index2-testi-section .left-content .title h4 {
     font-size: 16px;
-    color: #ee7133;
+    color: #138cec;
 }
 
 .index2-testi-section .left-content .title h2 {
@@ -2047,7 +2047,7 @@ h4.accordion-item__label {
 }
 
 .index2-testi-section .left-content span {
-    color: #ee7133;
+    color: #138cec;
 }
 
 .index2-testi-section .left-content .imdex-2-testi-slider .slider-item h3 {
@@ -2152,7 +2152,7 @@ h4.accordion-item__label {
     z-index: 1;
     transition: all 0.3s ease 0s;
     line-height: 50px;
-    color: #ee7133;
+    color: #138cec;
     border: none;
     text-align: center;
     font-size: 30px;
@@ -2179,7 +2179,7 @@ h4.accordion-item__label {
 }
 
 .index2-team-section .team-title h4 {
-    color: #ee7133;
+    color: #138cec;
     font-size: 16px;
 }
 
@@ -2190,7 +2190,7 @@ h4.accordion-item__label {
 }
 
 .index2-team-section .team-title span {
-    color: #ee7133;
+    color: #138cec;
 }
 
 .index2-team-section .team-title .index2-button {
@@ -2198,7 +2198,7 @@ h4.accordion-item__label {
 }
 
 .index2-team-section .team-title .index2-button a {
-    background-color: #ee7133;
+    background-color: #138cec;
     color: #fff;
     padding: 15px 35px;
     position: relative;
@@ -2246,7 +2246,7 @@ h4.accordion-item__label {
 
 .index2-team-section .single-team .team-image .icon-box {
     position: absolute;
-    background-color: #ee7133;
+    background-color: #138cec;
     top: 12%;
     right: 0px;
     opacity: 0;
@@ -2262,7 +2262,7 @@ h4.accordion-item__label {
     width: 55px;
     line-height: 55px;
     text-align: center;
-    background-color: #ee7133;
+    background-color: #138cec;
     color: #fff;
     transition: 0.5s;
 }
@@ -2290,7 +2290,7 @@ a.team-active i {
 
 .index2-team-section .single-team .team-image .text-box p {
     font-size: 15px;
-    color: #ee7133;
+    color: #138cec;
     margin-bottom: 0px;
 }
 
@@ -2313,7 +2313,7 @@ a.team-active i {
 }
 
 .index2-blog-section .blog-title h4 {
-    color: #ee7133;
+    color: #138cec;
     font-size: 16px;
     margin-bottom: 10px;
 }
@@ -2326,7 +2326,7 @@ a.team-active i {
 }
 
 .index2-blog-section .blog-title span {
-    color: #ee7133;
+    color: #138cec;
 }
 
 .index2-blog-section .index2-blog-slider .blog-slider-item {
@@ -2338,7 +2338,7 @@ a.team-active i {
 .index2-blog-section .index2-blog-slider .blog-slider-item .work a {
     font-size: 15px;
     padding: 2px 15px;
-    background-color: #ee7133;
+    background-color: #138cec;
     color: #fff;
     position: absolute;
     left: 20px;
@@ -2366,14 +2366,14 @@ a.team-active i {
 
 .index2-blog-section .index2-blog-slider .blog-slider-item .text-content .date h4 {
     font-size: 16px;
-    color: #ee7133;
+    color: #138cec;
     font-weight: 400;
     margin-right: 19px;
 }
 
 .index2-blog-section .index2-blog-slider .blog-slider-item .text-content .date h3 {
     font-size: 16px;
-    color: #ee7133;
+    color: #138cec;
     font-weight: 400;
     position: relative;
 }
@@ -2405,7 +2405,7 @@ a.team-active i {
 }
 
 .index2-blog-section .index2-blog-slider .blog-slider-item .text-content .text h2 a:hover {
-    color: #ee7133;
+    color: #138cec;
 }
 
 /* ======================subscribe section start========================== */
@@ -2427,7 +2427,7 @@ a.team-active i {
 }
 
 .index2-subscrib-section .title span {
-    color: #ee7133;
+    color: #138cec;
 }
 
 .index2-subscrib-section .form-wraper {
@@ -2442,7 +2442,7 @@ a.team-active i {
     position: absolute;
     padding: 16px 30px 17px;
     border: 0;
-    background-color: #ee7133;
+    background-color: #138cec;
     color: #fff;
     border-radius: 0px 5px 5px 0px;
     right: 0;
@@ -2548,7 +2548,7 @@ a.team-active i {
     font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
-    color: #ee7133;
+    color: #138cec;
 }
 
 /* Responsive Design */
@@ -2602,7 +2602,7 @@ a.team-active i {
     text-align: center;
     border-radius: 100%;
     position: relative;
-    color: #ee7133;
+    color: #138cec;
     -webkit-animation: ripple-white 1s linear infinite;
     animation: ripple-blue 1s linear infinite;
     -webkit-transition: 0.5s;
@@ -2650,7 +2650,7 @@ a.team-active i {
     text-align: center;
     border-radius: 100%;
     position: relative;
-    color: #ee7133;
+    color: #138cec;
     -webkit-animation: ripple-white 1s linear infinite;
     animation: ripple-blue 1s linear infinite;
     -webkit-transition: 0.5s;
@@ -2682,7 +2682,7 @@ a.team-active i {
     text-align: center;
     border-radius: 100%;
     position: relative;
-    color: #ee7133;
+    color: #138cec;
     -webkit-animation: ripple-white 1s linear infinite;
     animation: ripple-blue 1s linear infinite;
     -webkit-transition: 0.5s;
@@ -2730,7 +2730,7 @@ a.team-active i {
 .dreamit-section-title h5 {
     font-size: 20px;
     font-weight: 600;
-    color: #ee7133;
+    color: #138cec;
     margin-bottom: 10px;
 }
 
@@ -2773,7 +2773,7 @@ a.team-active i {
 .price ul li h3 {
     font-size: 24px;
     font-weight: bold;
-    color: #ee7133;
+    color: #138cec;
 }
 
 .price ul li h4 {
@@ -2785,7 +2785,7 @@ a.team-active i {
 .zoom-in-zoom-out {
     font-size: 18px;
     font-weight: 600;
-    color: #ee7133;
+    color: #138cec;
     animation: zoom-in-zoom-out 1.5s infinite;
 }
 
@@ -2978,7 +2978,7 @@ a.team-active i {
 }
 
 .owl-dot.active {
-    background: #ee7133;
+    background: #138cec;
     width: 35px;
 }
 
@@ -3062,7 +3062,7 @@ a.team-active i {
 .counter-icon1 i {
     font-size: 60px;
     display: inline-block;
-    color: #ee7133;
+    color: #138cec;
     transition: 0.5s;
 }
 
@@ -3086,7 +3086,7 @@ a.team-active i {
 }
 
 .counter-text-icon i {
-    color: #ee7133;
+    color: #138cec;
     display: inline-block;
     font-size: 30px;
 }
@@ -3102,7 +3102,7 @@ a.team-active i {
 }
 
 .dreamit-single-counter-box1:hover .counter-title1 h4 {
-    color: #ee7133;
+    color: #138cec;
 }
 
 /*style three*/
@@ -3135,7 +3135,7 @@ a.team-active i {
 .style-two .counter-icon i {
     font-size: 60px;
     display: inline-block;
-    color: #ee7133;
+    color: #138cec;
 }
 
 .style-two .counter-title h4 {
@@ -3358,7 +3358,7 @@ a.team-active i {
 .portfolio_nav ul li:hover,
 .portfolio_nav ul li.current_menu_item {
     color: #fff !important;
-    background: #ee7133;
+    background: #138cec;
 }
 
 /* Single Portfolio */
@@ -3510,7 +3510,7 @@ a.team-active i {
     color: #fff;
     width: 100%;
     border-radius: 8px;
-    box-shadow: 0px 0px 15px 1px #ee7133;
+    box-shadow: 0px 0px 15px 1px #138cec;
     transition: all 0.5s ease;
 }
 
@@ -3521,12 +3521,12 @@ a.team-active i {
 input:focus,
 button:focus {
     border-color: transparent;
-    outline-color: #ee7133;
+    outline-color: #138cec;
 }
 
 textarea:focus {
     border-color: transparent;
-    outline-color: #ee7133;
+    outline-color: #138cec;
     box-shadow: 0;
 }
 
@@ -3557,7 +3557,7 @@ textarea:focus {
     display: inline-block;
     border: 0;
     margin-top: 5px;
-    box-shadow: 0px 0px 15px 1px #ee7133;
+    box-shadow: 0px 0px 15px 1px #138cec;
     transition: all 0.5s ease;
 }
 
@@ -3596,8 +3596,8 @@ textarea:focus {
 
 .button_two a {
     display: inline-block;
-    border: 2px solid #ee7133;
-    color: #ee7133;
+    border: 2px solid #138cec;
+    color: #138cec;
     padding: 7px 21px;
     border-radius: 30px;
     font-weight: 700;
@@ -3610,7 +3610,7 @@ textarea:focus {
 }
 
 .button_two a:hover {
-    background: #ee7133;
+    background: #138cec;
     color: #fff;
 }
 
@@ -3653,7 +3653,7 @@ textarea:focus {
     height: 40px;
     width: 40px;
     line-height: 40px;
-    background: #ee7133;
+    background: #138cec;
     text-align: center;
     color: #fff;
     transition: 0.5s;
@@ -3701,7 +3701,7 @@ textarea:focus {
 }
 
 .menu-quick-link-content ul li a:hover {
-    color: #ee7133;
+    color: #138cec;
 }
 
 .widget.widget-nav-menu h4 {
@@ -3761,7 +3761,7 @@ textarea:focus {
 }
 
 .footer-recent-post-title h4 a:hover {
-    color: #ee7133 !important;
+    color: #138cec !important;
 }
 
 .footer-recent-post-title span {
@@ -3807,7 +3807,7 @@ h4.widget-title {
 }
 
 .footer-inner:hover .footer-socail-icon i {
-    color: #ee7133;
+    color: #138cec;
 }
 
 /*====================================================
@@ -3893,7 +3893,7 @@ h4.widget-title {
 }
 
 span.fill {
-    background: #ee7133 !important;
+    background: #138cec !important;
     border-radius: 5px;
 }
 
@@ -4133,7 +4133,7 @@ span.fill {
     bottom: 6px;
     border-radius: 50%;
     border: 3px solid transparent;
-    border-left-color: #ee7133;
+    border-left-color: #138cec;
     -webkit-animation: spin 2s linear infinite;
     -moz-animation: spin 2s linear infinite;
     -o-animation: spin 2s linear infinite;
@@ -4395,7 +4395,7 @@ div#particles .slider1.index2-slider-area {
     animation-delay: 1.5s;
     animation: Gradient 1.5s ease infinite, rocking 1.5s ease infinite;
     animation-delay: 2s;
-    color: #ee7133;
+    color: #138cec;
     border: none;
 }
 
@@ -4522,7 +4522,7 @@ div#particles .slider1.index2-slider-area {
 
 .download a {
     font-size: 17px;
-    color: #ee7133;
+    color: #138cec;
     padding: 16px 34px 13px;
     margin-right: 16px;
     transition: 0.5s;
@@ -4533,7 +4533,7 @@ div#particles .slider1.index2-slider-area {
     display: inline-block;
     border: 0;
     margin-top: 5px;
-    box-shadow: 0px 0px 15px 1px #ee7133;
+    box-shadow: 0px 0px 15px 1px #138cec;
     transition: all 0.5s ease;
 }
 
@@ -4544,7 +4544,7 @@ div#particles .slider1.index2-slider-area {
 .download i {
     display: inline-block;
     margin-left: 7px;
-    color: #ee7133;
+    color: #138cec;
 }
 
 .location-section .single-protfolio {
@@ -4609,7 +4609,7 @@ div#particles .slider1.index2-slider-area {
 
 .location-section .single-protfolio .protfolio-image .text-box p {
     font-size: 15px;
-    color: #ee7133;
+    color: #138cec;
     margin-bottom: 0px;
     transition: 0.5s;
 }
@@ -4621,7 +4621,7 @@ div#particles .slider1.index2-slider-area {
 }
 
 .location-section .single-protfolio .single_portfolio_icon a i:hover {
-    color: #ee7133;
+    color: #138cec;
 }
 
 .location-section .single-protfolio:hover .protfolio-image:before {
@@ -4634,7 +4634,7 @@ div#particles .slider1.index2-slider-area {
 }
 
 .location-section .single-protfolio:hover .protfolio-image .text-box {
-    background-color: #ee7133;
+    background-color: #138cec;
 }
 
 .location-section .single-protfolio:hover .protfolio-image .text-box p {
@@ -4671,7 +4671,7 @@ div#particles .slider1.index2-slider-area {
     height: 45px;
     bottom: 121px;
     right: 18px;
-    background-color: #ee7133;
+    background-color: #138cec;
     color: #000 !important;
     border-radius: 50px;
     text-align: center;
@@ -4689,7 +4689,7 @@ div#particles .slider1.index2-slider-area {
     height: 45px;
     bottom: 172px;
     right: 18px;
-    background-color: #ee7133;
+    background-color: #138cec;
     color: #000;
     border-radius: 50px;
     text-align: center;
@@ -4713,7 +4713,7 @@ div#particles .slider1.index2-slider-area {
     height: 45px;
     bottom: 68px;
     right: 18px;
-    background-color: #ee7133;
+    background-color: #138cec;
     color: #000;
     border-radius: 50px;
     text-align: center;
@@ -4746,8 +4746,8 @@ div#particles .slider1.index2-slider-area {
     display: block;
     width: 1vw;
     height: 1vw;
-    border-bottom: 3px solid #ee7133;
-    border-right: 3px solid #ee7133;
+    border-bottom: 3px solid #138cec;
+    border-right: 3px solid #138cec;
     transform: rotate(45deg);
     margin: -10px;
     animation: animate 2s infinite;
@@ -4924,61 +4924,61 @@ div#particles .slider1.index2-slider-area {
 
 @-webkit-keyframes glowing {
     0% {
-        background-color: #ee7133;
-        -webkit-box-shadow: 0 0 3px #ee7133;
+        background-color: #138cec;
+        -webkit-box-shadow: 0 0 3px #138cec;
     }
     50% {
-        background-color: #ee7133;
-        -webkit-box-shadow: 0 0 40px #ee7133;
+        background-color: #138cec;
+        -webkit-box-shadow: 0 0 40px #138cec;
     }
     100% {
-        background-color: #ee7133;
-        -webkit-box-shadow: 0 0 3px #ee7133;
+        background-color: #138cec;
+        -webkit-box-shadow: 0 0 3px #138cec;
     }
 }
 
 @-moz-keyframes glowing {
     0% {
-        background-color: #ee7133;
-        -moz-box-shadow: 0 0 3px #ee7133;
+        background-color: #138cec;
+        -moz-box-shadow: 0 0 3px #138cec;
     }
     50% {
-        background-color: #ee7133;
-        -moz-box-shadow: 0 0 40px #ee7133;
+        background-color: #138cec;
+        -moz-box-shadow: 0 0 40px #138cec;
     }
     100% {
-        background-color: #ee7133;
-        -moz-box-shadow: 0 0 3px #ee7133;
+        background-color: #138cec;
+        -moz-box-shadow: 0 0 3px #138cec;
     }
 }
 
 @-o-keyframes glowing {
     0% {
-        background-color: #ee7133;
-        box-shadow: 0 0 3px #ee7133;
+        background-color: #138cec;
+        box-shadow: 0 0 3px #138cec;
     }
     50% {
-        background-color: #ee7133;
-        box-shadow: 0 0 40px #ee7133;
+        background-color: #138cec;
+        box-shadow: 0 0 40px #138cec;
     }
     100% {
-        background-color: #ee7133;
-        box-shadow: 0 0 3px #ee7133;
+        background-color: #138cec;
+        box-shadow: 0 0 3px #138cec;
     }
 }
 
 @keyframes glowing {
     0% {
-        background-color: #ee7133;
-        box-shadow: 0 0 3px #ee7133;
+        background-color: #138cec;
+        box-shadow: 0 0 3px #138cec;
     }
     50% {
-        background-color: #ee7133;
-        box-shadow: 0 0 40px #ee7133;
+        background-color: #138cec;
+        box-shadow: 0 0 40px #138cec;
     }
     100% {
-        background-color: #ee7133;
-        box-shadow: 0 0 3px #ee7133;
+        background-color: #138cec;
+        box-shadow: 0 0 3px #138cec;
     }
 }
 
@@ -5075,7 +5075,7 @@ div#particles .slider1.index2-slider-area {
 
 .protfolio-section .owl-next i,
 .protfolio-section .owl-prev i {
-    background-color: #ee7133;
+    background-color: #138cec;
     border-radius: 3px;
     height: 48px;
     width: 48px;
@@ -5242,7 +5242,7 @@ div#particles .slider1.index2-slider-area {
         font-size: 34px;
         position: relative;
         top: 0px;
-        color: #ee7133
+        color: #138cec
     }
     .phone_float {
         position: fixed;
@@ -5264,7 +5264,7 @@ div#particles .slider1.index2-slider-area {
         font-size: 34px;
         position: relative;
         top: 0px;
-        color: #ee7133
+        color: #138cec
     }
     .email_float {
         position: fixed;
@@ -5284,7 +5284,7 @@ div#particles .slider1.index2-slider-area {
         font-size: 34px;
         position: relative;
         top: -3px;
-        color: #ee7133
+        color: #138cec
     }
     .whatsapp-icon {
         margin-top: 0;
@@ -5363,8 +5363,8 @@ div#particles .slider1.index2-slider-area {
         display: block;
         width: 4vw;
         height: 4vw;
-        border-bottom: 4px solid #ee7133;
-        border-right: 4px solid #ee7133;
+        border-bottom: 4px solid #138cec;
+        border-right: 4px solid #138cec;
         transform: rotate(45deg);
         margin: -10px;
         animation: animate 2s infinite;

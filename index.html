@@ -49,11 +49,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="headerTop">
         <div class="container">
 
-            <div class="phone"><a href="callto:"><i class="fas fa-phone"></i> +91 00000 00000</a></div>
+            <div class="phone"><a href="callto:+919845339426"><i class="fas fa-phone"></i> +91 9845339426</a></div>
 
             <div class="rightBox">
                 <div class="whatsapp">
-                    <a href="" tatarget="_blank">
+                    <a href="https://wa.me/919845339426" tatarget="_blank">
 						<i class="fa fa-whatsapp"></i>
 					</a>
                 </div>
@@ -89,7 +89,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <!-- <li><a href="" data-toggle="modal" data-target="#Floorplans" class="TopBtn"><img src="images/pdf-download-black.png" title="Download Brochure" alt="" class="pdf-download scroll" /> Brochure</a></li> -->
 
 
-                            <li><a class="TopBtn" href="" target="_blank" /><img src="images/whatsapp.png" title="Whatsapp" alt="" class="pdf-download zoom-in-zoom-out"
+                            <li><a class="TopBtn" href="https://wa.me/919845339426" target="_blank" /><img src="images/whatsapp.png" title="Whatsapp" alt="" class="pdf-download zoom-in-zoom-out"
                                 /> Whatsapp</a>
                             </li>
 
@@ -120,7 +120,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <!-- <li class="mDiv"><a href="" data-toggle="modal" data-target="#Floorplans" class="button2"><i class="fa fa-file-pdf-o"></i></a></li> -->
 
 
-                    <li class="mDiv"><a class="button2" href="" target="_blank"><i class="fa fa-whatsapp Greenbutton2"></i></a></li>
+                    <li class="mDiv"><a class="button2" href="https://wa.me/919845339426" target="_blank"><i class="fa fa-whatsapp Greenbutton2"></i></a></li>
                 </ul>
             </nav>
         </div>
@@ -218,8 +218,9 @@ h4 {
                 <div class="dreamit-section-title pt-4">
                     <h5>About the project</h5>
                     <h2>Lakeside Paradise</h2>
-                    <p>A scenic expanse of tranquil waters surrounded by lush stretches of undiscovered nature. The next leap in North Bengaluru’s lifestyle landscape is set to unveil beside a lake that is one of Yelahanka’s most prized natural treasures.</p>
-                </div>
+                    <p>
+                        Ajmera Lakeside Paradise, a premium residential development by Ajmera Group, is located in Yelahanka, Bengaluru. This exquisite project offers a grand clubhouse with panoramic views of the serene lake and the city skyline. Designed to provide a lifestyle of luxury and comfort, Ajmera Lakeside Paradise boasts finest amenities, including a spa, health club, salon, guest rooms, and a swimming pool. The spacious homes feature contemporary designs with floor-to-ceiling windows, flooding interiors with natural light while offering breathtaking lake views. Surrounded by lush green landscapes and parks, it offers an ideal living environment for nature enthusiasts. Ajmera Lakeside Paradise is the perfect choice for those seeking a luxurious and tranquil living experience.</p>
+                                    </div>
                 
                 <div class="price">
                     <ul>
@@ -300,16 +301,17 @@ h4 {
         </div>
     </div>
 
-
-   
     <style>
-      
-     /* General Styling */
+
+        .tab-label{
+            color: white;
+        }
+   /* General Styling */
 .unit-plan-section {
-    padding-top: 90px;
-    padding-bottom: 65px;
+    padding: 90px 20px 65px;
     background-color: #000000;
     color: #ffffff;
+    text-align: center;
 }
 
 .section-title {
@@ -321,67 +323,62 @@ h4 {
 .accordion-tabs-container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .tabs-wrapper {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Default to vertical arrangement */
     align-items: center;
-    gap: 10px;
+    gap: 15px;
 }
 
 .accordion-tab {
     background: linear-gradient(135deg, #1e1e1e, #4e4e4e);
-    border: none;
-    border-radius: 5px;
-    width: 250px;
-    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    width: 260px; /* Default button width for larger screens */
+    height: 55px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     color: #ffffff;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 18px;
     letter-spacing: 1px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.accordion-tab h4 {
-    margin: 0;
-    font-size: 18px;
-    color: #ffffff;
-}
-
 .accordion-tab:hover {
-    background: linear-gradient(135deg, #ee7133, #af4611);
-    transform: scale(1.05);
+    background: linear-gradient(135deg, #33b2ff, #1f7ca1); /* Blue hover colors */
+    transform: scale(1.07);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
 }
 
 .active-tab {
-    background: linear-gradient(135deg, #ff8d21, #b64707);
+    background: linear-gradient(135deg, #66aaff, #1f8ec2); /* Blue active state colors */
     color: #ffffff;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+    border: 1px solid #66aaff; /* Light blue border */
 }
 
-.active-tab h4 {
-    color: #ffffff;
-}
 
 /* Accordion Content */
 .accordion-content-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 25px;
+    flex-wrap: wrap;
 }
 
 .accordion-content {
     display: none;
-    animation: fadeIn 0.3s ease-in-out;
+    animation: fadeIn 0.4s ease-in-out;
+    max-width: 100%;
 }
 
 .active-content {
@@ -392,35 +389,137 @@ h4 {
 .portfolio-item {
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
 }
 
 .portfolio-image img {
     width: 100%;
     height: auto;
     display: block;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: blur(8px);
+    cursor: pointer;
 }
 
-.active-content .portfolio-image img {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
+.portfolio-image img:hover {
+    transform: scale(1.03);
 }
 
-/* Animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
+.unblur {
+    filter: blur(0) !important;
+}
+
+/* Popup Form */
+.popup-form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #000000;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    z-index: 9999;
+}
+
+.popup-form .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    background: white;
+    border: none; /* Optional: remove border for a cleaner look */
+    padding: 5px; /* Optional: add padding for better click area */
+    border-radius: 50%; /* Optional: make it circular */
+ 
+}
+@media (max-width: 768px) {
+    .popup-form .contact-button {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 10px; /* Add spacing between buttons */
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+
+    .popup-form .contact-button a#whatsapp-link {
+        width: 100%; /* Make button full-width */
+        text-align: center; /* Center text inside button */
+    }
+
+    .popup-form .contact-button button#submit-button {
+        width: 100%; /* Make button full-width */
     }
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tabs-wrapper {
+        flex-direction: row; /* Change to horizontal arrangement */
+        flex-wrap: wrap; /* Allow wrapping to new rows */
+        justify-content: center;
+        gap: 15px; /* Add space between buttons */
+    }
+
+    .accordion-tab {
+        width: 48%; /* Adjust width for two buttons per row */
+        height: 50px; /* Maintain proportionate height */
+        margin: 0; /* Remove margins for alignment */
+    }
+}
 
     </style>
+
+
+<div class="popup-form" id="popupForm">
+    
+    <div class="contact-form-box style-two">
+        <span class="close-btn" onclick="closeForm()">×</span>
+        <div class="noloaderr" id="loadermdl">
+            <img class="img-fluid" src="images/loader.gif" alt="Please wait...">
+        </div>
+        <div class="dreamit-section-title section-b text-left">
+            <h2>Register Now</h2>
+        </div>
+        <form id="popupForm" method="POST" onsubmit="submitForm(event)">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="from-box">
+                        <input type="text" name="name" id="name" placeholder="Your Name" required>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="from-box">
+                        <input type="email" name="email" id="email" placeholder="Your Email" required>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="from-box">
+                        <input type="text" name="phone" id="phone" placeholder="Phone Number" required>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="from-box">
+                        <select name="bhk_type" id="bhk_type" required>
+                            <option value="">Select BHK Type</option>
+                            <option value="2bhk">2 BHK</option>
+                            <option value="3bhk">3 BHK</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="contact-button d-flex justify-content-between">
+                        <button type="submit" id="submit-button" class="bgBlack list">Send Message</button>
+                        <a href="#" id="whatsapp-link" class="bgBlack list px-5" onclick="sendWhatsApp(); return false;">
+                            <i class="fa fa-whatsapp whatsapp-icon whtIcon"></i> WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
     
     <div class="unit-plan-section" id="Floor">
         <div class="container">
@@ -576,7 +675,7 @@ h4 {
     
 
 
-
+<!-- 
     <div class="protfolio-section bgBlackk" id="Floorp">
         <div class="container">
             <div class="row">
@@ -621,15 +720,6 @@ h4 {
 
             </div>
 
-            <!-- <div class="row">
-                <div class="col-lg-12">
-                    <div class="download mcenter mcenter list">
-                        <img src="images/pdf-download.png" title="Download" alt="" class="pdf-download list2 scroll" /> <a data-toggle="modal" class="spaceCss modalfp" data-target="#Floorplans" href="">
-							Download Floorplans
-						</a>
-                    </div>
-                </div>
-            </div> -->
         </div>
     </div>
 
@@ -671,17 +761,8 @@ h4 {
 
             </div>
 
-            <!-- <div class="row">
-                <div class="col-lg-12">
-                    <div class="download mcenter mcenter list">
-                        <img src="images/pdf-download.png" title="Download" alt="" class="pdf-download list2 scroll" /> <a data-toggle="modal" class="spaceCss modalfp" data-target="#Floorplans" href="">
-							Download Floorplans
-						</a>
-                    </div>
-                </div>
-            </div> -->
         </div>
-    </div>
+    </div> -->
 
 
 
@@ -761,132 +842,210 @@ h4 {
     </div>
 
 
-    <div class="counter-area style-two pt-90 pb-100 " id="Amenities">
-        <div class="container pt-2">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="dreamit-section-title text-center pb-30">
-                        <h2>Amenities</h2>
-                    </div>
+    <!-- HTML -->
+<div class="amenities-section" style="background-color: black; color: white; padding: 100px 0;">
+    <div class="container">
+        <h2 class="section-title" style="color: white; text-align: center; font-size: 2.5rem; margin-bottom: 30px;">Amenities</h2>
+        <div class="amenities-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; justify-items: center;">
+
+            <!-- Amenity Items -->
+            <div class="amenity-item" style="text-align: center;">
+                <div class="icon" style="font-size: 3rem; color: #007bff;">
+                    <i class="fas fa-child"></i>
                 </div>
+                <p style="margin-top: 10px; color: white;">Children's Play Area</p>
             </div>
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="about-content-text">
-                        <p><i class="fas fa-swimmer" style="font-size: 16px;"></i> <span>Swimming pool/Kids Pool</span></p>
-                        <p><i class="far fa-check-circle" style="font-size: 16px;"></i> <span>Badminton Court</span></p>
-                        <p><i class="fas fa-plug" style="font-size: 16px;"></i> <span>Charging Stations</span></p>
-                        <p><i class="fas fa-chess" style="font-size: 16px;"></i> <span>Board Games</span></p>
-                        <p><i class="fas fa-building" style="font-size: 16px;"></i> <span>Multipurpose Hall</span></p>
-                        <p><i class="fas fa-birthday-cake" style="font-size: 16px;"></i> <span>Party Lawn</span></p>
-                        <p><i class="fas fa-book-reader" style="font-size: 16px;"></i> <span>Library/Reading Room</span></p>
-                        <p><i class="fas fa-cogs" style="font-size: 16px;"></i> <span>Gazebo</span></p>
-                    </div>
+
+            <div class="amenity-item" style="text-align: center;">
+                <div class="icon" style="font-size: 3rem; color: #007bff;">
+                    <i class="fas fa-dumbbell"></i>
                 </div>
-                <div class="col-lg-4">
-                    <div class="about-content-text">
-                        <p><i class="fas fa-dumbbell" style="font-size: 16px;"></i> <span>Indoor Gymnasium</span></p>
-                        <p><i class="far fa-check-circle" style="font-size: 16px;"></i> <span>Tennis Court</span></p>
-                        <p><i class="fas fa-theater-masks" style="font-size: 16px;"></i> <span>Amphitheatre</span></p>
-                        <p><i class="far fa-check-circle" style="font-size: 16px;"></i> <span>Billiards Table</span></p>
-                        <p><i class="fas fa-tree" style="font-size: 16px;"></i> <span>Tree Plaza</span></p>
-                        <p><i class="fas fa-fire" style="font-size: 16px;"></i> <span>Bonfire Area</span></p>
-                        <p><i class="fas fa-spa" style="font-size: 16px;"></i> <span>Yoga and Meditation Centre</span></p>
-                        <p><i class="fas fa-walking" style="font-size: 16px;"></i> <span>Pedestrian Axis</span></p>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="about-content-text">
-                        <p><i class="fas fa-child" style="font-size: 16px;"></i> <span>Kids Play Area</span></p>
-                        <p><i class="fas fa-baseball-ball" style="font-size: 16px;"></i> <span>Box Cricket</span></p>
-                        <p><i class="fas fa-leaf" style="font-size: 16px;"></i> <span>Aroma Garden</span></p>
-                        <p><i class="fas fa-utensils" style="font-size: 16px;"></i> <span>Party Hall & Pantry</span></p>
-                        <p><i class="fas fa-users" style="font-size: 16px;"></i> <span>Senior Citizen Court</span></p>
-                        <p><i class="fas fa-sign-in-alt" style="font-size: 16px;"></i> <span>Arrival Plaza</span></p>
-                        <p><i class="fas fa-running" style="font-size: 16px;"></i> <span>Open Air Gym , Jogging Track</span></p>
-                        <p><i class="far fa-check-circle" style="font-size: 16px;"></i> <span>Tennis Court</span></p>
-                    </div>
-                </div>
+                <p style="margin-top: 10px; color: white;">Gymnasium</p>
             </div>
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="about-content-text">
-                        <p><i class="fas fa-basketball-ball" style="font-size: 16px;"></i> <span>Half Basketball Court</span></p>
-                        <p><i class="fas fa-dumbbell" style="font-size: 16px;"></i> <span>Gymnasium</span></p>
-                        <p><i class="fas fa-table-tennis" style="font-size: 16px;"></i> <span>Squash Court</span></p>
-                        <p><i class="fas fa-table-tennis" style="font-size: 16px;"></i> <span>Table Tennis</span></p>
-                        <p><i class="far fa-check-circle" style="font-size: 16px;"></i> <span>Shuttle Court</span></p>
-                        <p><i class="fas fa-basketball-ball" style="font-size: 16px;"></i> <span>Sports Sphere</span></p>
-                        <p><i class="fas fa-futbol" style="font-size: 16px;"></i> <span>Futsal Court</span></p>
-                        <p><i class="far fa-check-circle" style="font-size: 16px;"></i> <span>Cricket Practice Pitch</span></p>
-                    </div>
+
+            <div class="amenity-item" style="text-align: center;">
+                <div class="icon" style="font-size: 3rem; color: #007bff;">
+                    <i class="fas fa-table-tennis"></i>
                 </div>
-                <div class="col-lg-4">
-                    <div class="about-content-text">
-                        <p><i class="fas fa-baby-carriage" style="font-size: 16px;"></i> <span>Children's Play Area</span></p>
-                        <p><i class="fas fa-swimming-pool" style="font-size: 16px;"></i> <span>Toddler Pool</span></p>
-                        <p><i class="fas fa-balance-scale" style="font-size: 16px;"></i> <span>Slide Zone</span></p>
-                        <p><i class="fas fa-basketball-ball" style="font-size: 16px;"></i> <span>Hopscotch Zone</span></p>
-                        <p><i class="fas fa-paw" style="font-size: 16px;"></i> <span>Pet Park</span></p>
-                        <p><i class="fas fa-leaf" style="font-size: 16px;"></i> <span>Landscaped Gardens</span></p>
-                        <p><i class="fas fa-tree" style="font-size: 16px;"></i> <span>Mini Forest with Deck</span></p>
-                        <p><i class="fas fa-spa" style="font-size: 16px;"></i> <span>Yoga and Meditation Deck</span></p>
-                    </div>
+                <p style="margin-top: 10px; color: white;">Table Tennis</p>
+            </div>
+
+            <div class="amenity-item" style="text-align: center;">
+                <div class="icon" style="font-size: 3rem; color: #007bff;">
+                    <i class="fas fa-users"></i>
                 </div>
-                <div class="col-lg-4">
-                    <div class="about-content-text">
-                        <p><i class="fas fa-balance-scale" style="font-size: 16px;"></i> <span>Passive Court</span></p>
-                        <p><i class="fas fa-campground" style="font-size: 16px;"></i> <span>Camping Area</span></p>
-                        <p><i class="fas fa-couch" style="font-size: 16px;"></i> <span>Hammocks</span></p>
-                        <p><i class="fas fa-chair" style="font-size: 16px;"></i> <span>Seating Pavilion</span></p>
-                        <p><i class="fas fa-leaf" style="font-size: 16px;"></i> <span>Flowering Water Fountain</span></p>
-                        <p><i class="fas fa-seedling" style="font-size: 16px;"></i> <span>Sensory Garden</span></p>
-                        <p><i class="fas fa-basketball-ball" style="font-size: 16px;"></i> <span>Multipurpose Court</span></p>
-                        <p><i class="fas fa-eye" style="font-size: 16px;"></i> <span>Viewing Deck</span></p>
-                    </div>
+                <p style="margin-top: 10px; color: white;">Multipurpose Hall</p>
+            </div>
+
+            <div class="amenity-item" style="text-align: center;">
+                <div class="icon" style="font-size: 3rem; color: #007bff;">
+                    <i class="fas fa-swimmer"></i>
                 </div>
+                <p style="margin-top: 10px; color: white;">Swimming Pool</p>
+            </div>
+
+            <div class="amenity-item" style="text-align: center;">
+                <div class="icon" style="font-size: 3rem; color: #007bff;">
+                    <i class="fas fa-tree"></i>
+                </div>
+                <p style="margin-top: 10px; color: white;">Tree Plaza</p>
+            </div>
+
+            <div class="amenity-item" style="text-align: center;">
+                <div class="icon" style="font-size: 3rem; color: #007bff;">
+                    <i class="fas fa-book-reader"></i>
+                </div>
+                <p style="margin-top: 10px; color: white;">Library/Reading Room</p>
+            </div>
+
+            <div class="amenity-item" style="text-align: center;">
+                <div class="icon" style="font-size: 3rem; color: #007bff;">
+                    <i class="fas fa-spa"></i>
+                </div>
+                <p style="margin-top: 10px; color: white;">Yoga Hall</p>
+            </div>
+
+            <div class="amenity-item" style="text-align: center;">
+                <div class="icon" style="font-size: 3rem; color: #007bff;">
+                    <i class="fas fa-running"></i>
+                </div>
+                <p style="margin-top: 10px; color: white;">Jogging Track</p>
+            </div>
+
+            <div class="amenity-item" style="text-align: center;">
+                <div class="icon" style="font-size: 3rem; color: #007bff;">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <p style="margin-top: 10px; color: white;">Viewing Deck</p>
+            </div>
+
+            <div class="amenity-item" style="text-align: center;">
+                <div class="icon" style="font-size: 3rem; color: #007bff;">
+                    <i class="fas fa-child"></i>
+                </div>
+                <p style="margin-top: 10px; color: white;">Children's Pool</p>
+            </div>
+
+            <div class="amenity-item" style="text-align: center;">
+                <div class="icon" style="font-size: 3rem; color: #007bff;">
+                    <i class="fas fa-cocktail"></i>
+                </div>
+                <p style="margin-top: 10px; color: white;">Party Lawn</p>
+            </div>
+            
+
+            <div class="amenity-item" style="text-align: center;">
+                <div class="icon" style="font-size: 3rem; color: #007bff;">
+                    <i class="fas fa-circle-notch"></i>
+                </div>
+                <p style="margin-top: 10px; color: white;">Futsal Court</p>
+            </div>
+
+            <div class="amenity-item" style="text-align: center;">
+                <div class="icon" style="font-size: 3rem; color: #007bff;">
+                    <i class="fas fa-mountain"></i>
+                </div>
+                <p style="margin-top: 10px; color: white;">Gazebo Area</p>
+            </div>
+
+            <div class="amenity-item" style="text-align: center;">
+                <div class="icon" style="font-size: 3rem; color: #007bff;">
+                    <i class="fas fa-basketball-ball"></i>
+                </div>
+                <p style="margin-top: 10px; color: white;">Basketball Court</p>
+            </div>
+
+            <div class="amenity-item" style="text-align: center;">
+                <div class="icon" style="font-size: 3rem; color: #007bff;">
+                    <i class="fas fa-table-tennis"></i>
+                </div>
+                <p style="margin-top: 10px; color: white;">Squash Court</p>
+            </div>
+
+            <div class="amenity-item" style="text-align: center;">
+                <div class="icon" style="font-size: 3rem; color: #007bff;">
+                    <i class="fas fa-shuttle-van"></i>
+                </div>
+                <p style="margin-top: 10px; color: white;">Shuttle Court</p>
+            </div>
+
+            <div class="amenity-item" style="text-align: center;">
+                <div class="icon" style="font-size: 3rem; color: #007bff;">
+                    <i class="fas fa-house-user"></i>
+                </div>
+                <p style="margin-top: 10px; color: white;">Admin Office</p>
             </div>
         </div>
     </div>
+</div>
+
+
+<style>
+    .amenities-section .amenity-item {
+        transition: transform 0.3s ease;
+    }
+
+    .amenities-section .amenity-item:hover {
+        transform: scale(1.1);
+    }
+</style>
+
     
-    <div class="index2-about-section location-section" id="Location">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="dreamit-section-title text-center pb-30">
-                        <h2>Location Map</h2>
-                    </div>
+<div class="index2-about-section location-section" id="Location">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="dreamit-section-title text-center pb-30">
+                    <h2>Location Map</h2>
                 </div>
             </div>
-            <div class="row align-items-top">
-                <div class="col-md-12 col-lg-6">
-                    <div class="left-content">
-                        <div class="google-map">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2955.6483867745205!2d77.55961603449275!3d13.109879635332888!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae18948e775945%3A0xb40514c0422829ab!2sAjmera%20Lakeside%20Paradise!5e0!3m2!1sen!2sus!4v1737364921307!5m2!1sen!2sus" 
-                            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="row align-items-top">
+            <div class="col-md-12 col-lg-6">
+                <div class="left-content">
+                    <!--<div class="image">
+                        <img src="images/location.jpg" alt="">
+                    </div>-->
+                    <div class="single-protfolio">
+                        <div class="protfolio-image">
+                            <img src="images/location.webp" alt="" class="image">
+                            
+
                         </div>
                     </div>
                 </div>
-    
-                <div class="col-md-12 col-lg-6">
-                    <div class="right-content">
-                        <h2>Connectivity</h2>
-                        <ul>
-                            <li>Swami Vivekanand International School - 5 mins</li>
-                            <li>RMZ Galleria Commercials - 19 mins</li>
-                            <li>Garuda Mall - 10 mins</li>
-                            <li>Yalahanka Railway Station - 18 mins</li>
-                            <li>D-Mart - 8 mins</li>
-                            <li>Prolife Hospital - 24 mins</li>
-                        </ul>
-                    </div>
+            </div>
+
+            <div class="col-md-12 col-lg-6">
+                <div class="right-content">
+                    <h2>Connectivity</h2>
+
+                    <ul>
+                        <li>Swami Vivekanand International School - 5 mins</li>
+                        <li>RMZ Galleria Commercials - 19 mins</li>
+                        <li>Garuda Mall - 10 mins</li>
+                        <li>Yalahanka Railway Station - 18 mins</li>
+                        <li>D-Mart - 8 mins</li>
+                        <li>Prolife Hospital - 24 mins</li>
+
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
+</div>
     
+<style>
+     @media (max-width: 768px) {
+        .contact-button {
+            flex-direction: column;
+        }
 
+        #whatsapp-link {
+            margin-top: 15px;
+        }
+    }
+</style>
 
     <div class="contact-form-area pt-90 pb-90" id="contact">
         <div class="container">
@@ -905,47 +1064,44 @@ h4 {
                         <div class="dreamit-section-title section-b text-left">
                             <h2>Register Now</h2>
                         </div>
-                        <form action="" method="POST">
+                        <form id="submit-form" method="POST">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-12">
                                     <div class="from-box">
-                                        <input type="text" id="txtName" placeholder="Your Name" onblur="fnnamebr()">
-                                        <span id="spName" class="error"></span>
+                                        <input type="text" name="name" id="name" placeholder="Your Name" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-12">
                                     <div class="from-box">
-                                        <input type="text" id="txtEmail" placeholder="Your Email" onblur="fnemailqc()">
-                                        <span id="spEmail" class="error"></span>
+                                        <input type="email" name="email" id="email" placeholder="Your Email" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-12">
                                     <div class="from-box">
-                                        <input type="text" id="mobile_code" class="form-control" placeholder="Phone Number" name="name" 
-                                               onblur="fnphoneqc()" 
-                                               onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')">
-                                        <span id="spContactno" class="error csswhite"></span>
+                                        <input type="text" name="phone" id="phone" placeholder="Phone Number" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-12">
                                     <div class="from-box">
-                                        <select id="role">
-                                            <option>Select BHK Type</option>
-                                            <option>2 BHK</option>
-                                            <option>3 BHK</option>
+                                        <select name="bhk_type" id="bhk_type" required>
+                                            <option value="">Select BHK Type</option>
+                                            <option value="2bhk">2 BHK</option>
+                                            <option value="3bhk">3 BHK</option>
                                         </select>
-                                        <span id="sprole" class="error"></span>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12">
-                                    <div class="contact-button text-center">
-                                        <a href="" class="bgBlack list">
-                                            <i class="fa fa-whatsapp whatsapp-icon whtIcon"></i> Whatsapp
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <div class="contact-button d-flex justify-content-between">
+                                        <button type="submit" id="submit-button" class="bgBlack list">Send Message</button>
+                                        <a href="#" id="whatsapp-link" class="bgBlack list px-5" onclick="sendWhatsApp(); return false;">
+                                            <i class="fa fa-whatsapp whatsapp-icon whtIcon"></i> WhatsApp
                                         </a>
                                     </div>
                                 </div>
                             </div>
                         </form>
+                        
+                       
                         
 
 
@@ -994,151 +1150,13 @@ h4 {
 
 
     <!-- Modal -->
-    <div class="contactPopup modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-
-                    <div class="contact-form-box style-two bgGray">
-                        <div class="noloaderr" id="loaderregqc">
-                            <img class="img-fluid" src="images/loader.gif" alt="Please wait...">
-                        </div>
-                        <div class="dreamit-section-title section-b text-left">
-                            <h2>Register Now</h2>
-                        </div>
-                        <div id="dreamit-form1">
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-sm-12">
-                                    <div class="from-box">
-                                        <input type="text" id="txtnamereg" placeholder="Your Name" onblur="fnnamereg();" />
-                                        <span id="spnamereg" class="error"></span>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12">
-                                    <div class="from-box">
-                                        <input type="text" id="txtemailreg" placeholder="Your Email" onblur="fnemailreg();">
-                                        <span id="spemailreg" class="error"></span>
-
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12">
-                                    <div class="from-box">
-                                        <input type="text" id="Register_Now" class="form-control" placeholder="Phone Number" onblur="fnphonereg()" onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')" />
-                                        <span id="spcontactreg" class="error csswhite"></span>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12">
-                                    <div class="from-box">
-                                        <select id="rolereg" onblur="fnrolereg()">
-											<option value="">Select Role</option>
-											<option value="I am an agent">I am an agent</option>
-											<option value="I am a potential Buyer">I am a potential Buyer</option>
-											<option value="I just exploring">I just exploring</option>
-										</select>
-                                        <span id="sprolereg" class="error"></span>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6 col-md-6 col-sm-12">
-                                    <div class="contact-button text-center">
-                                        <button type="button" class="bgBlack" onclick="return saveregqc();"> Get a Call Back Now</button>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6 col-md-6 col-sm-12">
-                                    <div class="contact-button text-center">
-                                        <a href="" class="bgBlack list"><i class="fa fa-whatsapp whatsapp-icon whtIcon"></i> Whatsapp</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="status"></div>
-                    </div>
-                </div>
+  
 
 
-            </div>
-        </div>
-    </div>
-
-
-    <div class="contactPopup modal fade" id="Floorplans" tabindex="-1" aria-labelledby="Floorplans" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-
-                    <div class="contact-form-box style-two bgGray">
-                        <div class="noloaderr" id="loaderbrqc">
-                            <img class="img-fluid" src="images/loader.gif" alt="Please wait...">
-                        </div>
-                        <div class="dreamit-section-title section-b text-left">
-                            <h2 id="modaltitle">Download Brochure</h2>
-                        </div>
-                        <div id="dreamit-form">
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-sm-12">
-                                    <div class="from-box">
-                                        <input type="text" id="txtnamebr" placeholder="Your Name" onblur="fnnamebrqc();">
-                                        <span id="spnamebr" class="error"></span>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12">
-                                    <div class="from-box">
-                                        <input type="text" id="txtemailbr" placeholder="Your Email" onblur="fnemailbrqc();">
-                                        <span id="spemailbr" class="error"></span>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12">
-                                    <div class="from-box">
-                                        <!--<input type="text" placeholder="Your Phone">-->
-                                        <input type="text" id="Brochure" class="form-control" placeholder="Phone Number" name="name" onblur="fnphonebrqc();" onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')">
-                                        <span id="spcontactbr" class="error csswhite"></span>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12">
-                                    <div class="from-box">
-                                        <select id="rolebr" onblur="fnrolebrqc()">
-											<option value="">Select Role</option>
-											<option value="I am an agent">I am an agent</option>
-											<option value="I am a potential Buyer">I am a potential Buyer</option>
-											<option value="I just exploring">I just exploring</option>
-										</select>
-                                        <span id="sprolebr" class="error"></span>
-
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6 col-md-6 col-sm-12">
-                                    <div class="contact-button text-center">
-                                        <button type="button" class="bgBlack" onclick="return savebrochureqc();"> Get a Call Back Now</button>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6 col-md-6 col-sm-12">
-                                    <div class="contact-button text-center">
-                                        <a href="" class="bgBlack list"><i class="fa fa-whatsapp whatsapp-icon whtIcon"></i> Whatsapp</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="status"></div>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-    </div>
     <div class="fixedDiv">
-        <a href="" title="" class="whatsapp_float" target="_blank"><i class="fa fa-whatsapp whatsapp-icon"></i></a>
+        <a href="https://wa.me/919845339426" title="" class="whatsapp_float" target="_blank"><i class="fa fa-whatsapp whatsapp-icon"></i></a>
 
-        <a href="callto:" class="phone_float">
+        <a href="callto:+919845339426" class="phone_float">
 			<i class="fa fa-phone whatsapp-icon"></i>
 		</a>
 
@@ -1164,6 +1182,51 @@ h4 {
     <script src="js/popper.min.js"></script>
     <script src="js/jquery.scrollUp.js"></script>
     <script src="js/theme.js"></script>
+    <!-- <script>
+        let currentImage;
+        
+        // Function to open the popup form
+        function openForm(imageElement) {
+            currentImage = imageElement;
+            document.getElementById('popupForm').style.display = 'block';
+        }
+        
+        // Function to close the popup form
+        function closeForm() {
+            document.getElementById('popupForm').style.display = 'none';
+        }
+        
+        // Function to submit the form and unblur all images
+        function submitForm(event) {
+            event.preventDefault(); // Prevent default form submission
+            
+            // Unblur all images after form submission
+            document.querySelectorAll('.portfolio-image img').forEach(img => {
+                img.classList.add('unblur');
+            });
+    
+            closeForm(); // Close the form
+    
+            alert('Form submitted successfully! All images are now visible.');
+        }
+    
+        // Attach click event to all images to trigger the form popup
+        document.querySelectorAll('.portfolio-image img').forEach(img => {
+            img.addEventListener('click', function() {
+                openForm(this);
+            });
+        });
+    
+        // Close form when clicking outside of it
+        window.onclick = function(event) {
+            let popupForm = document.getElementById('popupForm');
+            if (event.target == popupForm) {
+                closeForm();
+            }
+        };
+    </script> -->
+    
+    
     <script>
         $(window).on('scroll', function() {
             var scrolled = $(window).scrollTop();
