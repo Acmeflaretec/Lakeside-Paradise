@@ -1,0 +1,533 @@
+/* Update primary colors */
+:root {
+  --primary-color: #C19A5B;      /* Gold */
+  --primary-dark: #9A7842;       /* Darker gold */
+  --primary-light: #D4B78C;      /* Lighter gold */
+  --dark-bg: #000000;           /* Black background */
+  --dark-secondary: #1A1A1A;    /* Slightly lighter black */
+  --text-light: #FFFFFF;        /* White text */
+  --text-gold: #C19A5B;         /* Gold text */
+}
+
+/* Update background colors */
+body {
+    background: var(--dark-bg);
+    color: var(--text-light);
+}
+
+.dreamit_nav_manu {
+    background: var(--dark-bg);
+}
+
+.footer-middle,
+.footer-bottom,
+.contact-form-area {
+    background: var(--dark-bg);
+}
+
+/* Update accent colors */
+.button_two a:hover,
+.company_icon i,
+.menu-quick-link-content ul li a:hover,
+.footer-recent-post-title h4 a:hover,
+.footer-inner:hover .footer-socail-icon i {
+    background: var(--primary-color);
+    color: var(--dark-bg);
+}
+
+/* Update borders and dividers */
+.footer-bottom {
+    border-top: 1px solid rgba(193, 154, 91, 0.23);
+}
+
+.barfiller {
+    background: rgba(193, 154, 91, 0.2);
+}
+
+span.fill {
+    background: var(--primary-color) !important;
+}
+
+/* Update hover states */
+.menu-quick-link-content ul li a:hover,
+.footer-recent-post-title h4 a:hover {
+    color: var(--primary-color);
+}
+
+/* Update loader colors */
+.loader {
+    border-top-color: var(--primary-color);
+}
+
+.loader:before {
+    border-left-color: var(--primary-dark);
+}
+
+.loader:after {
+    border-right-color: var(--primary-light);
+}
+
+/* Update scroll to top button */
+.scroll-area .go-top {
+    background: var(--primary-color);
+    color: var(--dark-bg);
+}
+
+.scroll-area .go-top:hover {
+    background: var(--primary-dark);
+}
+
+/* Update form elements */
+input, select, textarea {
+    background: var(--dark-secondary);
+    border: 1px solid rgba(193, 154, 91, 0.2);
+    color: var(--text-light);
+}
+
+/* Update buttons */
+.custom-btn,
+.enquire-btn {
+    background: var(--primary-color);
+    color: var(--dark-bg);
+}
+
+.custom-btn:hover,
+.enquire-btn:hover {
+    background: var(--primary-dark);
+    color: var(--text-light);
+}
+
+/* Update section backgrounds */
+.overview-section,
+.pricing-section,
+.unit-plan-section {
+    background: var(--dark-bg);
+}
+
+/* Update cards and containers */
+.price-card {
+    background: rgba(193, 154, 91, 0.1);
+    border: 1px solid rgba(193, 154, 91, 0.2);
+}
+
+.price-card:hover {
+    background: rgba(193, 154, 91, 0.15);
+}
+
+/* Update headings */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-light);
+}
+
+.section-tag,
+.price-type,
+.plan-tag {
+    color: var(--primary-color);
+}
+
+/* Update navigation */
+.owl-prev i,
+.owl-next i {
+    background-color: var(--primary-color);
+    color: var(--dark-bg);
+}
+
+.owl-prev i:hover,
+.owl-next i:hover {
+    background: var(--primary-dark);
+    color: var(--text-light);
+}
+
+/* Update overlays */
+.image-overlay {
+    background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.4));
+}
+
+.view-text {
+    border: 2px solid var(--primary-color);
+    background: rgba(193, 154, 91, 0.2);
+}
+
+/* Gallery Section Styles */
+.index2-service-section {
+    background: var(--dark-bg);
+    padding: 90px 0;
+}
+
+/* Gallery Tab Buttons */
+.accordion-tab {
+    background: linear-gradient(to right, var(--dark-bg), var(--dark-secondary));
+    border: 1px solid rgba(193, 154, 91, 0.2);
+    border-radius: 12px;
+    padding: 25px 35px;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.accordion-tab:hover {
+    background: linear-gradient(to right, var(--primary-color), var(--primary-dark));
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(193, 154, 91, 0.3);
+    border-color: var(--primary-color);
+}
+
+.accordion-tab.accordion-active {
+    background: linear-gradient(to right, var(--primary-color), var(--primary-dark));
+    border-color: var(--primary-color);
+    box-shadow: 0 6px 20px rgba(193, 154, 91, 0.3);
+}
+
+/* Tab Content */
+.tab-label h4 {
+    color: var(--text-light);
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tab-divider {
+    width: 40px;
+    height: 2px;
+    background: rgba(193, 154, 91, 0.3);
+    margin: 12px auto;
+    transition: all 0.3s ease;
+}
+
+.accordion-tab:hover .tab-divider,
+.accordion-tab.accordion-active .tab-divider {
+    width: 60px;
+    background: rgba(193, 154, 91, 0.8);
+}
+
+/* Gallery Images */
+.portfolio-image {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(193, 154, 91, 0.15);
+}
+
+.portfolio-image img {
+    transition: transform 0.6s ease;
+}
+
+.portfolio-image:hover img {
+    transform: scale(1.05);
+}
+
+/* Image Overlay */
+.image-overlay {
+    background: linear-gradient(to top, 
+        rgba(0, 0, 0, 0.9), 
+        rgba(193, 154, 91, 0.4)
+    );
+}
+
+/* View Button */
+.view-text {
+    color: var(--text-light);
+    font-size: 24px;
+    font-weight: 600;
+    padding: 15px 30px;
+    border: 2px solid var(--primary-color);
+    border-radius: 30px;
+    background: rgba(193, 154, 91, 0.2);
+    transition: all 0.3s ease;
+}
+
+.view-text:hover {
+    background: rgba(193, 154, 91, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Gallery Popup */
+.unit-plan-popup {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+}
+
+.popup-content {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 800px;
+    z-index: 1000000;
+}
+
+.popup-close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #C19A5B;
+}
+
+.submit-btn {
+    background: #C19A5B;
+    color: #fff;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #9A7842;
+}
+
+.from-box input,
+.from-box select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Active State Indicator */
+.accordion-tab.accordion-active:before {
+    content: '';
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background: var(--primary-color);
+    clip-path: polygon(0 50%, 100% 0, 100% 100%);
+}
+
+/* Gallery Navigation */
+.owl-prev i,
+.owl-next i {
+    background-color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    color: var(--dark-bg);
+    transition: all 0.3s ease;
+}
+
+.owl-prev i:hover,
+.owl-next i:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+/* Update all instances of #138cec to #C19A5B */
+.TopBtn {
+    background: #C19A5B;
+    font-size: 11px !important;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #000 !important
+}
+
+.dreamit-section-title span {
+    color: #C19A5B;
+}
+
+.em_bar_bg:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -2.7px;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background: #C19A5B;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-name: MOVE-BG;
+}
+
+.text-left1.em_bar_bg:before {
+    background: #C19A5B;
+}
+
+.style-three .dreamit_menu>ul>li>a {
+    background: linear-gradient(to right, #C19A5B, #C19A5B, 50%, #fff 50%);
+}
+
+.sticky.style-three .dreamit_menu>ul>li>a {
+    background: linear-gradient(to right, #C19A5B, #C19A5B, 50%, #1c1c24 50%);
+}
+
+.dreamit_menu>ul>li.current>a {
+    color: #C19A5B;
+}
+
+.dreamit_menu ul .sub-menu {
+    border-top: 2px solid #C19A5B;
+}
+
+.dreamit_menu ul .sub-menu li:hover>a,
+.dreamit_menu ul .sub-menu .sub-menu li:hover>a,
+.dreamit_menu ul .sub-menu .sub-menu .sub-menu li:hover>a,
+.dreamit_menu ul .sub-menu .sub-menu .sub-menu .sub-menu li:hover>a {
+    background: #C19A5B;
+}
+
+.header-button .dtbtn {
+    background: #C19A5B;
+}
+
+.plan-image {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.plan-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.view-btn {
+    background: #C19A5B;
+    color: #fff;
+    border: 2px solid #C19A5B;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.view-btn:hover {
+    background: transparent;
+    color: #C19A5B;
+}
+
+.plan-image:hover .image-overlay {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+#unitPlanPopup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+}
+
+.plan-selector {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.plan-btn {
+    background: rgba(193, 154, 91, 0.1);
+    border: 1px solid rgba(193, 154, 91, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.plan-btn.active {
+    background: rgba(193, 154, 91, 0.2);
+    border-color: #C19A5B;
+}
+
+.plan-type {
+    color: #C19A5B;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.plan-name {
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.plan-size {
+    color: #C19A5B;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.plan-tag {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+}
+
+.plan-display {
+    position: relative;
+    width: 250px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.plan-content {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.plan-content.active {
+    display: block;
+}
+
+.plan-content img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    margin: 0 auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* Updated media query for smaller screens */
+@media (max-width: 768px) {
+    .plan-display {
+        width: 200px;
+    }
+    
+    .plan-content img {
+        width: 200px;
+    }
+}
+
+/* Fix for any potential container issues */
+.row.align-items-center {
+    align-items: flex-start !important;
+}
+
+.col-lg-8 {
+    display: flex;
+    justify-content: center;
+}

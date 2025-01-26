@@ -7,7 +7,7 @@
     <title>Lakeside Paradise </title>
     <link rel="icon" href='images/favicon.ico' sizes="32x32" />
     <meta name="keywords" content="Lakeside Paradise, Yelahanka, Bengaluru" />
-    <meta name="description" content="A scenic expanse of tranquil waters surrounded by lush stretches of undiscovered nature. The next leap in North Bengaluru’s lifestyle landscape is set to unveil beside a lake that is one of Yelahanka’s most prized natural treasures.">
+    <meta name="description" content="A scenic expanse of tranquil waters surrounded by lush stretches of undiscovered nature. The next leap in North Bengaluru's lifestyle landscape is set to unveil beside a lake that is one of Yelahanka's most prized natural treasures.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="all" />
     <link rel="stylesheet" href="css/all.min.css" type="text/css" media="all" />
@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="css/intlTelInput.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
    
     <!-- Google Tag Manager -->
     <!-- <script>
@@ -130,10 +131,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         .slider-area {
     position: relative;
     height: 750px;
-    background: url('your-background-image.jpg') no-repeat center center/cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+}
+
+.slider-item {
+    height: 750px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.slider-content {
+    position: relative;
+    z-index: 2;
+    padding: 100px 0;
     text-align: center;
     color: #fff;
 }
@@ -182,24 +211,412 @@ h4 {
     font-weight: normal;
 }
 
+.popup-form {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+}
+
+.popup-form.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-form-box {
+    position: relative;
+    background: #111111;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(218, 165, 32, 0.1);
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border: 1px solid rgba(218, 165, 32, 0.3);
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+    background: rgba(218, 165, 32, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 24px;
+    color: goldenrod;
+    border: 1px solid rgba(218, 165, 32, 0.3);
+}
+
+.close-btn:hover {
+    background: rgba(218, 165, 32, 0.2);
+    transform: rotate(90deg);
+}
+
+/* Form Elements */
+.from-box {
+    margin-bottom: 20px;
+}
+
+.from-box input,
+.from-box select {
+    width: 100%;
+    padding: 12px 20px;
+    border: 1px solid rgba(218, 165, 32, 0.3);
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    color: goldenrod;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    height: 48px;
+}
+
+.from-box input::placeholder {
+    color: rgba(218, 165, 32, 0.6);
+}
+
+.from-box input:focus,
+.from-box select:focus {
+    outline: none;
+    border-color: goldenrod;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 10px rgba(218, 165, 32, 0.3);
+}
+
+.from-box select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='goldenrod' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: calc(100% - 15px) center;
+    padding-right: 40px;
+    cursor: pointer;
+}
+
+.from-box select option {
+    background: #111111;
+    color: goldenrod;
+    padding: 12px;
+    font-size: 16px;
+}
+
+/* Hide default dropdown arrow in IE */
+.from-box select::-ms-expand {
+    display: none;
+}
+
+/* Placeholder styling for select */
+.from-box select option[value=""] {
+    color: rgba(218, 165, 32, 0.6);
+}
+
+.from-box select:invalid {
+    color: rgba(218, 165, 32, 0.6);
+}
+
+/* Buttons */
+.contact-button {
+    margin-top: 30px;
+}
+
+.contact-button button,
+.contact-button a {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bgBlack {
+    background: linear-gradient(45deg, #111111, #222222);
+    color: goldenrod;
+    border: 1px solid rgba(218, 165, 32, 0.3);
+}
+
+.bgBlack:hover {
+    background: linear-gradient(45deg, #222222, #111111);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(218, 165, 32, 0.3);
+    border-color: goldenrod;
+}
+
+.whatsapp-icon {
+    margin-right: 8px;
+    font-size: 18px;
+    color: goldenrod;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-form-box {
+        padding: 30px 20px;
+    }
+
+    .contact-button {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .contact-button button,
+    .contact-button a {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+/* Scrollbar Styling */
+.contact-form-box::-webkit-scrollbar {
+    width: 8px;
+}
+
+.contact-form-box::-webkit-scrollbar-track {
+    background: rgba(218, 165, 32, 0.1);
+    border-radius: 4px;
+}
+
+.contact-form-box::-webkit-scrollbar-thumb {
+    background: rgba(218, 165, 32, 0.2);
+    border-radius: 4px;
+}
+
+.contact-form-box::-webkit-scrollbar-thumb:hover {
+    background: rgba(218, 165, 32, 0.3);
+}
+
+/* Update the styles for better appearance */
+.blur-image {
+    filter: blur(8px);
+    transition: all 0.5s ease;
+    width: 100%;
+    height: auto;
+    transform: scale(1);
+}
+
+.blur-image.unblurred {
+    filter: blur(0);
+    transform: scale(1.02); /* Slight zoom effect when unblurred */
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: opacity 0.5s ease;
+}
+
+.image-overlay.hidden {
+    opacity: 0;
+    pointer-events: none; /* Prevents clicking on hidden overlay */
+}
+
+.view-text {
+    color: white;
+    font-size: 18px;
+    padding: 12px 25px;
+    border: 2px solid white;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.view-text:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.portfolio-image {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.aboutajmera-section {
+    padding: 80px 0;
+    background: #000;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.about-title {
+    color: #C19A5B;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.subtitle {
+    color: #C19A5B;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.description {
+    margin-bottom: 30px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+}
+
+.features-section {
+    margin-bottom: 30px;
+    background: rgba(193, 154, 91, 0.1);
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid rgba(193, 154, 91, 0.2);
+}
+
+.features-section h3 {
+    color: #C19A5B;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.features-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.features-section ul li {
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.05rem;
+}
+
+.features-section ul li:before {
+    content: "•";
+    color: #C19A5B;
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+.features-section p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.about-logo img {
+    max-width: 100%;
+    height: auto;
+    filter: brightness(1.2);
+}
+
+@media (max-width: 768px) {
+    .about-title {
+        font-size: 2rem;
+    }
+    
+    .features-section h3 {
+        font-size: 1.2rem;
+    }
+    
+    .aboutajmera-section {
+        padding: 50px 0;
+    }
+
+    .features-section {
+        padding: 20px;
+    }
+}
+
     </style>
-    <div class="slider-area slider3 d-flex align-items-center" id="home">
-        <div class="mobileBanner"><img src="images/mobile.webp" alt="" /></div>
+    <div class="slider-area" id="home">
+        <!-- Desktop Slider -->
+        <div class="main-slider owl-carousel desktop-slider">
+            <div class="slider-item">
+                <img src="images/slide1.webp" alt="Desktop Slide 1">
+            </div>
+            <div class="slider-item">
+                <img src="images/slide2.webp" alt="Desktop Slide 2">
+            </div>
+            <div class="slider-item">
+                <img src="images/slide3.jpg" alt="Desktop Slide 3">
+            </div>
+            <div class="slider-item">
+                <img src="images/slide4.jpg" alt="Desktop Slide 4">
+            </div>
+        </div>
+
+        <!-- Mobile Slider -->
+        <div class="main-slider owl-carousel mobile-slider">
+            <div class="slider-item">
+                <img src="images/slide1m.jpg" alt="Mobile Slide 1">
+            </div>
+            <div class="slider-item">
+                <img src="images/slide2m..webp" alt="Mobile Slide 2">
+            </div>
+            <div class="slider-item">
+                <img src="images/slide3m.jpg" alt="Mobile Slide 3">
+            </div>
+            <div class="slider-item">
+                <img src="images/slide4m.jpg" alt="Mobile Slide 4">
+            </div>
+        </div>
+    </div>
+    
+    <div class="overview-section">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-sm-12">
-                    <div class="slider-content">
-                        <h1>GATEWAY TO REFINED<br><span>LIVING BY THE LAKE</span></h1>
-                        <div class="property-details">
-                            <div class="property">
-                                <p>3 BHK | ₹1.40 CR* ONWARDS</p>
-                            </div>
-                            <div class="property">
-                                <p>2 BHK | ₹1.10 CR* ONWARDS</p>
-                            </div>
-                        </div>
-                        <h4 style="color: white;"><i class="fa fa-map-marker"></i> Yelahanka</h4>
-                        <p class="cta-text">SECURE YOUR SPOT BEFORE IT'S TOO LATE!</p>
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="overview-content wow fadeInLeft" data-wow-delay="0.3s">
+                        <div class="section-tag">OVERVIEW</div>
+                        <h2 class="section-title">WELCOME TO LAKESIDE <span>EXPERIENTIAL LIVING</span></h2>
+                        <div class="divider"></div>
+                        <p class="section-description">A scenic expanse of tranquil waters surrounded by lush stretches of undiscovered nature. The next leap in North Bengaluru's lifestyle landscape is set to unveil beside a lake that is one of Yelahanka's most prized natural treasures. With modern planning and design that grants greater accessibility to this captivating natural resource, the site is ideal for the development of a luxury livingcommunity unlike any other.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="overview-image wow fadeInRight" data-wow-delay="0.5s">
+                        <img src="images/overv (1).jpg" alt="Lakeside View">
+                        <div class="image-overlay"></div>
                     </div>
                 </div>
             </div>
@@ -208,280 +625,101 @@ h4 {
     
     <div class="about-area pt-85 pb-95" id="Overview">
         <div class="container">
-            <!-- Left Image -->
-            <div class="about-image">
-                <img src="images/about.jpg" alt="About Project">
-            </div>
-    
-            <!-- Right Content -->
-            <div class="about-content">
-                <div class="dreamit-section-title pt-4">
-                    <h5>About the project</h5>
-                    <h2>Lakeside Paradise</h2>
-                    <p>
-                        Ajmera Lakeside Paradise, a premium residential development by Ajmera Group, is located in Yelahanka, Bengaluru. This exquisite project offers a grand clubhouse with panoramic views of the serene lake and the city skyline. Designed to provide a lifestyle of luxury and comfort, Ajmera Lakeside Paradise boasts finest amenities, including a spa, health club, salon, guest rooms, and a swimming pool. The spacious homes feature contemporary designs with floor-to-ceiling windows, flooding interiors with natural light while offering breathtaking lake views. Surrounded by lush green landscapes and parks, it offers an ideal living environment for nature enthusiasts. Ajmera Lakeside Paradise is the perfect choice for those seeking a luxurious and tranquil living experience.</p>
-                                    </div>
-                
-                <div class="price">
-                    <ul>
-                        <li>
-                            <p>3 BHK</p>
-                            <h3>₹1.40 CR* Onwards</h3>
-                        </li>
-                        <li>
-                            <p>2 BHK</p>
-                            <h3>₹1.10 CR* Onwards</h3>
-                        </li>
-                        <li>
-                            <p>Offer</p>
-                            <div class="zoom-in-zoom-out">Limited Time Period Offer</div>
-                        </li>
-                        <li>
-                            <p>Current Status</p>
-                            <h4>Under Construction</h4>
-                        </li>
-                    </ul>
-                    <!-- <div class="download">
-                        <img src="images/pdf-download.png" title="Download" alt="Download">
-                        <a data-toggle="modal" class="modalpp" data-target="#Floorplans" href="">Get a Payment Plan</a>
-                    </div> -->
-                </div>
-                
-            </div>
-        </div>
-    </div>
-    
-    <div class="divider"></div>
-
-    <div class="counter-section" id="Payment" style="display:none">
-        <div class="container">
-            <div class="dreamit-section-title text-center pb-30">
-                <h2>Payment Plan</h2>
-            </div>
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="counter-content">
-                        <h2 class="">10%</h2>
-                        <div class="counter-text">
-                            <p>Down Payment</p>
-                            <h3>On Booking Date</h3>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="counter-content">
-                        <h2 class="">70%</h2>
-                        <div class="counter-text">
-                            <p>During Construction</p>
-                            <h3>1st to 7th Installment</h3>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="counter-content">
-                        <h2 class="">20%</h2>
-                        <div class="counter-text">
-                            <p>On Handover</p>
-                            <h3>100% Completion</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <div class="row justify-content-center">
-                <div class="download payDiv">
-                    <img src="images/pdf-download.png" title="Download" alt="" class="pdf-download list2 scroll" />
-                    <a data-toggle="modal" class="spaceCss modalpp" data-target="#Floorplans" href="">
-						Payment Plan Options
-						</a>
+                <div class="col-lg-8 text-center">
+                    <div class="section-heading wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="section-tag">ABOUT THE PROJECT</div>
+                        <h2 class="section-title">Lakeside Paradise</h2>
+                        <div class="divider mx-auto"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row align-items-center mt-5">
+                <!-- Left Image -->
+                <div class="col-lg-6">
+                    <div class="about-image wow fadeInLeft" data-wow-delay="0.3s">
+                        <img src="images/about.jpg" alt="About Project">
+                    </div>
+                </div>
+
+                <!-- Right Content -->
+                <div class="col-lg-6">
+                    <div class="about-content wow fadeInRight" data-wow-delay="0.4s">
+                        <p class="about-description">
+                            Ajmera Lakeside Paradise, a premium residential development by Ajmera Group, is located in Yelahanka, Bengaluru. This exquisite project offers a grand clubhouse with panoramic views of the serene lake and the city skyline. Designed to provide a lifestyle of luxury and comfort, Ajmera Lakeside Paradise boasts finest amenities, including a spa, health club, salon, guest rooms, and a swimming pool. The spacious homes feature contemporary designs with floor-to-ceiling windows, flooding interiors with natural light while offering breathtaking lake views. Surrounded by lush green landscapes and parks, it offers an ideal living environment for nature enthusiasts.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Price Section -->
+            <div class="row justify-content-center mt-5">
+                <div class="col-lg-12">
+                    <div class="price-container wow fadeInUp" data-wow-delay="0.5s">
+                        <ul class="price-list">
+                            <li class="price-item">
+                                <h4>3 BHK</h4>
+                                <h3>₹1.40 CR* Onwards</h3>
+                            </li>
+                            <li class="price-item">
+                                <h4>2 BHK</h4>
+                                <h3>₹1.10 CR* Onwards</h3>
+                            </li>
+                            <li class="price-item special">
+                                <h4>Offer</h4>
+                                <div class="zoom-in-zoom-out">Limited Time Period Offer</div>
+                            </li>
+                            <li class="price-item">
+                                <h4>Current Status</h4>
+                                <h3>Under Construction</h3>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <style>
-
-        .tab-label{
-            color: white;
-        }
-   /* General Styling */
-.unit-plan-section {
-    padding: 90px 20px 65px;
-    background-color: #000000;
-    color: #ffffff;
-    text-align: center;
-}
-
-.section-title {
-    margin-bottom: 30px;
-    color: #ffffff;
-}
-
-/* Accordion Tabs */
-.accordion-tabs-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.tabs-wrapper {
-    display: flex;
-    flex-direction: column; /* Default to vertical arrangement */
-    align-items: center;
-    gap: 15px;
-}
-
-.accordion-tab {
-    background: linear-gradient(135deg, #1e1e1e, #4e4e4e);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 8px;
-    width: 260px; /* Default button width for larger screens */
-    height: 55px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 18px;
-    letter-spacing: 1px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.accordion-tab:hover {
-    background: linear-gradient(135deg, #33b2ff, #1f7ca1); /* Blue hover colors */
-    transform: scale(1.07);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
-}
-
-.active-tab {
-    background: linear-gradient(135deg, #66aaff, #1f8ec2); /* Blue active state colors */
-    color: #ffffff;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
-    border: 1px solid #66aaff; /* Light blue border */
-}
-
-
-/* Accordion Content */
-.accordion-content-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 25px;
-    flex-wrap: wrap;
-}
-
-.accordion-content {
-    display: none;
-    animation: fadeIn 0.4s ease-in-out;
-    max-width: 100%;
-}
-
-.active-content {
-    display: block;
-}
-
-/* Portfolio Image */
-.portfolio-item {
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
-    transition: all 0.3s ease;
-}
-
-.portfolio-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.3s ease, filter 0.3s ease;
-    filter: blur(8px);
-    cursor: pointer;
-}
-
-.portfolio-image img:hover {
-    transform: scale(1.03);
-}
-
-.unblur {
-    filter: blur(0) !important;
-}
-
-/* Popup Form */
-.popup-form {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #000000;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    border-radius: 8px;
-    z-index: 9999;
-}
-
-.popup-form .close-btn {
-    position: absolute;
-    top: 20px;
-    right: 15px;
-    font-size: 20px;
-    cursor: pointer;
-    background: white;
-    border: none; /* Optional: remove border for a cleaner look */
-    padding: 5px; /* Optional: add padding for better click area */
-    border-radius: 50%; /* Optional: make it circular */
- 
-}
-@media (max-width: 768px) {
-    .popup-form .contact-button {
-        flex-direction: column; /* Stack buttons vertically */
-        gap: 10px; /* Add spacing between buttons */
-    }
-
-    .popup-form .contact-button a#whatsapp-link {
-        width: 100%; /* Make button full-width */
-        text-align: center; /* Center text inside button */
-    }
-
-    .popup-form .contact-button button#submit-button {
-        width: 100%; /* Make button full-width */
-    }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .tabs-wrapper {
-        flex-direction: row; /* Change to horizontal arrangement */
-        flex-wrap: wrap; /* Allow wrapping to new rows */
-        justify-content: center;
-        gap: 15px; /* Add space between buttons */
-    }
-
-    .accordion-tab {
-        width: 48%; /* Adjust width for two buttons per row */
-        height: 50px; /* Maintain proportionate height */
-        margin: 0; /* Remove margins for alignment */
-    }
-}
-
-    </style>
-
-
-<div class="popup-form" id="popupForm">
     
-    <div class="contact-form-box style-two">
-        <span class="close-btn" onclick="closeForm()">×</span>
-        <div class="noloaderr" id="loadermdl">
-            <img class="img-fluid" src="images/loader.gif" alt="Please wait...">
+
+   
+
+
+   
+
+<div class="unit-plan-section" id="Floor">
+    <div class="container">
+        <div class="section-title text-center pb-30">
+            <h2 style="color: #ffffff;">Master Plan</h2>
         </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="masterplan-container">
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <img src="images/masterplan.jpg" alt="Master Plan" class="blur-image" id="masterPlanImage" onclick="showUnitPlanPopup()">
+                            <div class="image-overlay" id="imageOverlay">
+                                <div class="view-text">Click to View</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Popup Form -->
+<div class="popup-form" id="unitPlanPopup">
+    <div class="contact-form-box">
+        <span class="close-btn" onclick="hideUnitPlanPopup()">&times;</span>
         <div class="dreamit-section-title section-b text-left">
-            <h2>Register Now</h2>
+            <h2 style="color: #C19A5B; font-weight: 600; margin-bottom: 15px;">Book Your Appointment Today</h2>
+            <div style="width: 60px; height: 3px; background: #C19A5B; margin: 10px 0;"></div>
         </div>
-        <form id="popupForm" method="POST" onsubmit="submitForm(event)">
+        <form id="submit-form" method="POST">
+            <!-- Form content -->
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12">
                     <div class="from-box">
@@ -520,250 +758,92 @@ h4 {
     </div>
 </div>
 
-    
-    <div class="unit-plan-section" id="Floor">
-        <div class="container">
-            <div class="section-title text-center pb-30">
-                <h2 style="color: #ffffff;">Floor Plans</h2>
-            </div>
-    
-            <section class="accordion-container row">
-                <section class="accordion-tabs-container col-lg-5 col-md-6 col-sm-12">
-                    <div class="tabs-wrapper">
-                        <button class="accordion-tab active-tab" data-group="1" data-id="0">
-                            <span class="tab-label text-center">
-                                <h4>Wing - E</h4>
-                            </span>
-                        </button>
-                        <button class="accordion-tab" data-group="1" data-id="1">
-                            <span class="tab-label text-center">
-                                <h4>Wing - F</h4>
-                            </span>
-                        </button>
-                        <button class="accordion-tab" data-group="1" data-id="2">
-                            <span class="tab-label text-center">
-                                <h4>Wing - G</h4>
-                            </span>
-                        </button>
-                        <button class="accordion-tab" data-group="1" data-id="3">
-                            <span class="tab-label text-center">
-                                <h4>Wing - H</h4>
-                            </span>
-                        </button>
+<!-- Unit Plans Section -->
+<div class="unit-plan-section pt-90 pb-65" id="UnitPlan2">
+    <div class="container">
+        <div class="section-title text-center pb-50">
+            <div class="section-tag">DISCOVER</div>
+            <h2>FLOOR PLANS</h2>
+            <div class="divider mx-auto"></div>
+        </div>
+
+        <div class="row align-items-center">
+            <!-- Left Side - Plan Selection -->
+            <div class="col-lg-4 col-md-12">
+                <div class="plan-selector">
+                    <div class="plan-btn active" data-group="2" data-id="0">
+                        <div class="btn-content">
+                            <div class="plan-type">3 BEDROOM</div>
+                            <div class="plan-name">SERIES 1</div>
+                            <div class="plan-size">2185 Sq.ft</div>
+                            <div class="plan-tag">Premium Living</div>
+                        </div>
                     </div>
-                </section>
-    
-                <section class="accordion-content-container col-lg-7 col-md-6 col-sm-12">
-                    <article class="accordion-content active-content" data-group="1" data-id="0">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="portfolio-item">
-                                    <div class="portfolio-image">
-                                        <img src="images/floorPlan/wing-e.jpg" alt="Wing E">
-                                    </div>
-                                </div>
-                            </div>
+
+                    <div class="plan-btn" data-group="2" data-id="1">
+                        <div class="btn-content">
+                            <div class="plan-type">3 BEDROOM</div>
+                            <div class="plan-name">SERIES 2</div>
+                            <div class="plan-size">2285 Sq.ft</div>
+                            <div class="plan-tag">Luxury Living</div>
                         </div>
-                    </article>
-                    <article class="accordion-content" data-group="1" data-id="1">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="portfolio-item">
-                                    <div class="portfolio-image">
-                                        <img src="images/floorPlan/wing f.jpg" alt="Wing F">
-                                    </div>
-                                </div>
-                            </div>
+                    </div>
+
+                    <div class="plan-btn" data-group="2" data-id="2">
+                        <div class="btn-content">
+                            <div class="plan-type">3 BEDROOM</div>
+                            <div class="plan-name">SERIES 3</div>
+                            <div class="plan-size">2385 Sq.ft</div>
+                            <div class="plan-tag">Elite Living</div>
                         </div>
-                    </article>
-                    <article class="accordion-content" data-group="1" data-id="2">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="portfolio-item">
-                                    <div class="portfolio-image">
-                                        <img src="images/floorPlan/wing g.jpg" alt="Wing G">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="accordion-content" data-group="1" data-id="3">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="portfolio-item">
-                                    <div class="portfolio-image">
-                                        <img src="images/floorPlan/wing h.jpg" alt="Wing H">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </section>
-            </section>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side - Plan Display -->
+            <div class="col-lg-8 col-md-12">
+                <div class="plan-display responsive-margin">
+                    <div class="plan-content active" data-group="2" data-id="0">
+                        <img src="images/floorPlan/3 B 1.jpg" class="responsive-image" alt="3 BHK Series 1">
+                    </div>
+
+                    <div class="plan-content" data-group="2" data-id="1">
+                        <img src="images/floorPlan/3 B 2.jpg" class="responsive-image" alt="3 BHK Series 2">
+                    </div>
+
+                    <div class="plan-content" data-group="2" data-id="2">
+                        <img src="images/floorPlan/3 B 3.jpg" class="responsive-image" alt="3 BHK Series 3">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+</div>
+<style>
+    .responsive-margin {
+        margin-left: 200px;
+    }
     
-    <div class="unit-plan-section pt-90 pb-65" id="UnitPlan2">
-        <div class="container">
-            <div class="section-title text-center pb-30">
-                <h2 style="color: white;">Unit Plan</h2>
-            </div>
+    .responsive-image {
+        width: 500px;
+    }
     
-            <section class="accordion-container row">
-                <section class="accordion-tabs-container col-lg-5 col-md-6 col-sm-12">
-                    <div class="tabs-wrapper">
-                        <button class="accordion-tab active-tab" data-group="2" data-id="0">
-                            <span class="tab-label text-center">
-                                <h4>3 BEDROOM<br>1 SERIES</h4>
-                            </span>
-                        </button>
+    @media (max-width: 768px) {
+        .responsive-margin {
+            margin-left: 0;
+        }
+        
+        .responsive-image {
+            width: 300px;
+        }
+    }
     
-                        <button class="accordion-tab" data-group="2" data-id="1">
-                            <span class="tab-label text-center">
-                                <h4>3 BEDROOM<br>2 SERIES</h4>
-                            </span>
-                        </button>
-    
-                        <button class="accordion-tab" data-group="2" data-id="2">
-                            <span class="tab-label text-center">
-                                <h4>3 BEDROOM<br>3 SERIES</h4>
-                            </span>
-                        </button>
-                    </div>
-                </section>
-    
-                <section class="accordion-content-container col-lg-7 col-md-6 col-sm-12">
-                    <article class="accordion-content active-content" data-group="2" data-id="0">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="portfolio-item">
-                                    <div class="portfolio-image">
-                                        <img src="images/floorPlan/3 B 1.jpg" style="height: 500px;" alt="Type A">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-    
-                    <article class="accordion-content" data-group="2" data-id="1">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="portfolio-item">
-                                    <div class="portfolio-image">
-                                        <img src="images/floorPlan/3 B 2.jpg" style="height: 500px;" alt="Type B">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-    
-                    <article class="accordion-content" data-group="2" data-id="2">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="portfolio-item">
-                                    <div class="portfolio-image">
-                                        <img src="images/floorPlan/3 B 3.jpg" style="height: 500px;" alt="Type C">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </section>
-            </section>
-        </div>
-    </div>
-    
-
-
-<!-- 
-    <div class="protfolio-section bgBlackk" id="Floorp">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="dreamit-section-title text-center pb-30">
-                        <h2>Floor Plan</h2>
-                    </div>
-                </div>
-            </div>
-
-            <div class="blog_list2 owl-carousel">
-                <div class="single-protfolio item">
-                    <div class="protfolio-image image">
-                        <img src="images/floorPlan/wing-e.jpg" alt="">
-                        
-                    </div>
-                </div>
-
-                <div class="single-protfolio item">
-                    <div class="protfolio-image image">
-                        <img src="images/floorPlan/wing f.jpg" alt="">
-                        
-                    </div>
-                </div>
-
-                <div class="single-protfolio item">
-                    <div class="protfolio-image image">
-                        <img src="images/floorPlan/wing g.jpg" alt="">
-                        
-                    </div>
-                </div>
-
-                <div class="single-protfolio item">
-                    <div class="protfolio-image image">
-                        <img src="images/floorPlan/wing h.jpg" alt="">
-                        
-                    </div>
-                </div>
-
-
-
-
-            </div>
-
-        </div>
-    </div>
-
-    <div class="protfolio-section bgBlackk" id="">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="dreamit-section-title text-center pb-30">
-                        <h2>Unit Plan </h2>
-                    </div>
-                </div>
-            </div>
-
-            <div class="blog_list2 owl-carousel">
-                <div class="single-protfolio item">
-                    <div class="protfolio-image image">
-                        <img src="images/floorPlan/3 B 1.jpg" alt="">
-                        
-                    </div>
-                </div>
-
-                <div class="single-protfolio item">
-                    <div class="protfolio-image image">
-                        <img src="images/floorPlan/3 B 2.jpg" alt="">
-                        
-                    </div>
-                </div>
-
-                <div class="single-protfolio item">
-                    <div class="protfolio-image image">
-                        <img src="images/floorPlan/3 B 3.jpg" alt="">
-                        
-                    </div>
-                </div>
-
-
-
-
-
-            </div>
-
-        </div>
-    </div> -->
-
+    @media (max-width: 480px) {
+        .responsive-image {
+            width: 400px;
+        }
+    }
+    </style>
 
 
 
@@ -850,84 +930,84 @@ h4 {
 
             <!-- Amenity Items -->
             <div class="amenity-item" style="text-align: center;">
-                <div class="icon" style="font-size: 3rem; color: #007bff;">
+                <div class="icon" style="font-size: 3rem; color: #C19A5B;">
                     <i class="fas fa-child"></i>
                 </div>
                 <p style="margin-top: 10px; color: white;">Children's Play Area</p>
             </div>
 
             <div class="amenity-item" style="text-align: center;">
-                <div class="icon" style="font-size: 3rem; color: #007bff;">
+                <div class="icon" style="font-size: 3rem; color: #C19A5B;">
                     <i class="fas fa-dumbbell"></i>
                 </div>
                 <p style="margin-top: 10px; color: white;">Gymnasium</p>
             </div>
 
             <div class="amenity-item" style="text-align: center;">
-                <div class="icon" style="font-size: 3rem; color: #007bff;">
+                <div class="icon" style="font-size: 3rem; color: #C19A5B;">
                     <i class="fas fa-table-tennis"></i>
                 </div>
                 <p style="margin-top: 10px; color: white;">Table Tennis</p>
             </div>
 
             <div class="amenity-item" style="text-align: center;">
-                <div class="icon" style="font-size: 3rem; color: #007bff;">
+                <div class="icon" style="font-size: 3rem; color: #C19A5B;">
                     <i class="fas fa-users"></i>
                 </div>
                 <p style="margin-top: 10px; color: white;">Multipurpose Hall</p>
             </div>
 
             <div class="amenity-item" style="text-align: center;">
-                <div class="icon" style="font-size: 3rem; color: #007bff;">
+                <div class="icon" style="font-size: 3rem; color: #C19A5B;">
                     <i class="fas fa-swimmer"></i>
                 </div>
                 <p style="margin-top: 10px; color: white;">Swimming Pool</p>
             </div>
 
             <div class="amenity-item" style="text-align: center;">
-                <div class="icon" style="font-size: 3rem; color: #007bff;">
+                <div class="icon" style="font-size: 3rem; color: #C19A5B;">
                     <i class="fas fa-tree"></i>
                 </div>
                 <p style="margin-top: 10px; color: white;">Tree Plaza</p>
             </div>
 
             <div class="amenity-item" style="text-align: center;">
-                <div class="icon" style="font-size: 3rem; color: #007bff;">
+                <div class="icon" style="font-size: 3rem; color: #C19A5B;">
                     <i class="fas fa-book-reader"></i>
                 </div>
                 <p style="margin-top: 10px; color: white;">Library/Reading Room</p>
             </div>
 
             <div class="amenity-item" style="text-align: center;">
-                <div class="icon" style="font-size: 3rem; color: #007bff;">
+                <div class="icon" style="font-size: 3rem; color: #C19A5B;">
                     <i class="fas fa-spa"></i>
                 </div>
                 <p style="margin-top: 10px; color: white;">Yoga Hall</p>
             </div>
 
             <div class="amenity-item" style="text-align: center;">
-                <div class="icon" style="font-size: 3rem; color: #007bff;">
+                <div class="icon" style="font-size: 3rem; color: #C19A5B;">
                     <i class="fas fa-running"></i>
                 </div>
                 <p style="margin-top: 10px; color: white;">Jogging Track</p>
             </div>
 
             <div class="amenity-item" style="text-align: center;">
-                <div class="icon" style="font-size: 3rem; color: #007bff;">
+                <div class="icon" style="font-size: 3rem; color: #C19A5B;">
                     <i class="fas fa-eye"></i>
                 </div>
                 <p style="margin-top: 10px; color: white;">Viewing Deck</p>
             </div>
 
             <div class="amenity-item" style="text-align: center;">
-                <div class="icon" style="font-size: 3rem; color: #007bff;">
+                <div class="icon" style="font-size: 3rem; color: #C19A5B;">
                     <i class="fas fa-child"></i>
                 </div>
                 <p style="margin-top: 10px; color: white;">Children's Pool</p>
             </div>
 
             <div class="amenity-item" style="text-align: center;">
-                <div class="icon" style="font-size: 3rem; color: #007bff;">
+                <div class="icon" style="font-size: 3rem; color: #C19A5B;">
                     <i class="fas fa-cocktail"></i>
                 </div>
                 <p style="margin-top: 10px; color: white;">Party Lawn</p>
@@ -935,42 +1015,42 @@ h4 {
             
 
             <div class="amenity-item" style="text-align: center;">
-                <div class="icon" style="font-size: 3rem; color: #007bff;">
+                <div class="icon" style="font-size: 3rem; color: #C19A5B;">
                     <i class="fas fa-circle-notch"></i>
                 </div>
                 <p style="margin-top: 10px; color: white;">Futsal Court</p>
             </div>
 
             <div class="amenity-item" style="text-align: center;">
-                <div class="icon" style="font-size: 3rem; color: #007bff;">
+                <div class="icon" style="font-size: 3rem; color: #C19A5B;">
                     <i class="fas fa-mountain"></i>
                 </div>
                 <p style="margin-top: 10px; color: white;">Gazebo Area</p>
             </div>
 
             <div class="amenity-item" style="text-align: center;">
-                <div class="icon" style="font-size: 3rem; color: #007bff;">
+                <div class="icon" style="font-size: 3rem; color: #C19A5B;">
                     <i class="fas fa-basketball-ball"></i>
                 </div>
                 <p style="margin-top: 10px; color: white;">Basketball Court</p>
             </div>
 
             <div class="amenity-item" style="text-align: center;">
-                <div class="icon" style="font-size: 3rem; color: #007bff;">
+                <div class="icon" style="font-size: 3rem; color: #C19A5B;">
                     <i class="fas fa-table-tennis"></i>
                 </div>
                 <p style="margin-top: 10px; color: white;">Squash Court</p>
             </div>
 
             <div class="amenity-item" style="text-align: center;">
-                <div class="icon" style="font-size: 3rem; color: #007bff;">
+                <div class="icon" style="font-size: 3rem; color: #C19A5B;">
                     <i class="fas fa-shuttle-van"></i>
                 </div>
                 <p style="margin-top: 10px; color: white;">Shuttle Court</p>
             </div>
 
             <div class="amenity-item" style="text-align: center;">
-                <div class="icon" style="font-size: 3rem; color: #007bff;">
+                <div class="icon" style="font-size: 3rem; color: #C19A5B;">
                     <i class="fas fa-house-user"></i>
                 </div>
                 <p style="margin-top: 10px; color: white;">Admin Office</p>
@@ -1046,6 +1126,208 @@ h4 {
         }
     }
 </style>
+<section class="aboutajmera-section">
+    <div class="container">
+        <div class="row align-items-center justify-content-between">
+            <div class="col-lg-8">
+                <div class="about-content">
+                    <h2 class="about-title">ELEVATE YOUR LIFESTYLE AT AJMERA LAKESIDE</h2>
+                    <div class="about-text">
+                        <p class="subtitle">LUXURY LIVING IN THE HEART OF BENGALURU</p>
+                        <p class="description">
+                            Welcome to Ajmera Lakeside/Marina Phase I & II, a premium residential project in Yelahanka, Bengaluru. Developed by the renowned Ajmera Group with 60 years of excellence, this project offers exquisite 3-Bed residences starting from ₹1.40 Cr (all-inclusive).
+                        </p>
+                        
+                        <div class="features-section">
+                            <h3>LUXURIOUS AMENITIES</h3>
+                            <ul>
+                                <li>Grand clubhouse with panoramic lake and city views</li>
+                                <li>Spa, health club, and premium salon facilities</li>
+                                <li>Swimming pool and outdoor sports courts</li>
+                                <li>Guest rooms and party hall for entertainment</li>
+                            </ul>
+                        </div>
+
+                        <div class="features-section">
+                            <h3>SCENIC SURROUNDINGS</h3>
+                            <p>
+                                Experience breathtaking views of the serene lake and city skyline. Nestled amidst lush green landscapes and parks, Ajmera Lakeside/Marina offers the perfect blend of urban luxury and natural tranquility.
+                            </p>
+                        </div>
+
+                        <div class="features-section">
+                            <h3>WHY CHOOSE AJMERA LAKESIDE</h3>
+                            <ul>
+                                <li>Premium 3-Bed residences with world-class amenities</li>
+                                <li>Stunning lake and city views</li>
+                                <li>Surrounded by natural beauty</li>
+                                <li>Backed by 60 years of trusted excellence</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="about-logo text-center">
+                    <img src="images/dev-logos.png" alt="Ajmera Group Logo">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="coming-soon-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="coming-soon-content text-center">
+                    <div class="sparkle">✨</div>
+                    <h2>COMING SOON</h2>
+                    <h3>Luxury Capital of Yelahanka!</h3>
+                    
+                    <div class="description">
+                        <p>Step into a world of unparalleled elegance where every detail exudes sophistication.</p>
+                    </div>
+                    
+                    <div class="price-box">
+                        <div class="residence-type">🏡 3-Bed Residences</div>
+                        <div class="price">₹1.40 Cr <span>(All Inclusive)*</span></div>
+                    </div>
+                    
+                    <div class="luxury-note">
+                        <p>Crafted for the connoisseurs of luxury, these residences redefine opulence and exclusivity.</p>
+                    </div>
+                    
+                    <div class="cta-button">
+                        <a href="tel:+919845339426" class="call-btn">
+                            <i class="fa fa-phone"></i> Call us to know more!
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.coming-soon-section {
+    padding: 100px 0;
+    background: #000;
+    color: #fff;
+    position: relative;
+}
+
+.sparkle {
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+.coming-soon-content h2 {
+    color: #C19A5B;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+}
+
+.coming-soon-content h3 {
+    color: #fff;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.description p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.price-box {
+    display: inline-block;
+    padding: 25px 40px;
+    margin-bottom: 30px;
+    border-left: 3px solid #C19A5B;
+}
+
+.residence-type {
+    font-size: 1.2rem;
+    color: #C19A5B;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.price {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.price span {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.luxury-note {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 40px;
+    font-style: italic;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.call-btn {
+    background: #C19A5B;
+    color: #000;
+    padding: 15px 40px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: inline-block;
+    transition: all 0.3s ease;
+    border: 2px solid #C19A5B;
+}
+
+.call-btn:hover {
+    background: transparent;
+    color: #C19A5B;
+}
+
+.call-btn i {
+    margin-right: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .coming-soon-section {
+        padding: 70px 0;
+    }
+
+    .coming-soon-content h2 {
+        font-size: 2rem;
+    }
+    
+    .coming-soon-content h3 {
+        font-size: 1.5rem;
+    }
+    
+    .price {
+        font-size: 1.8rem;
+    }
+    
+    .price-box {
+        padding: 20px 30px;
+    }
+}
+</style>
 
     <div class="contact-form-area pt-90 pb-90" id="contact">
         <div class="container">
@@ -1062,7 +1344,8 @@ h4 {
                             <img class="img-fluid" src="images/loader.gif" alt="Please wait...">
                         </div>
                         <div class="dreamit-section-title section-b text-left">
-                            <h2>Register Now</h2>
+                            <h2 style="color: #C19A5B; font-weight: 600; margin-bottom: 6px;">Book Your Appointment Today</h2>
+                            <div style="width: 60px; height: 3px; background: #C19A5B; margin: 5px 0;"></div>
                         </div>
                         <form id="submit-form" method="POST">
                             <div class="row">
@@ -1128,12 +1411,15 @@ h4 {
 									</a>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-12">
-                                    <p class="text-center">Copyright © all rights reserved.</p>
+                                    <p class="text-center" style="margin-bottom: 5px;">Copyright © all rights reserved.</p>
+                                    <p class="text-center" style="color: #C19A5B; font-size: 14px; letter-spacing: 0.5px;">
+                                        Authorised Marketing Channel Partner
+                                    </p>
                                 </div>
                                 <div class="col-lg-3 col-md-6 col-sm-12">
                                     <a class="logo_img" href="https://www.acmeflare.in/" title="">
 										<img src="images/company_logo.png" alt="" class="smart" />
-										<!-- <p class="list">Smart Enterprises LLC Marketing Agency For<br/> <strong>Property Junction International Real Estate Broker LLC</strong></p> -->
+										<!-- <p class="list">Smart Enterprises LLC Marketing Agency For<br/> <strong>Property Junction International Real Estate Broker LLC</strong></p> -->
 									</a>
                                 </div>
                             </div>
@@ -1154,15 +1440,17 @@ h4 {
 
 
     <div class="fixedDiv">
-        <a href="https://wa.me/919845339426" title="" class="whatsapp_float" target="_blank"><i class="fa fa-whatsapp whatsapp-icon"></i></a>
+        <a href="https://wa.me/919845339426" title="" class="float-btn whatsapp_float" target="_blank">
+            <i class="fa fa-whatsapp float-icon" style="margin-top: 10px;"></i>
+        </a>
 
-        <a href="callto:+919845339426" class="phone_float">
-			<i class="fa fa-phone whatsapp-icon"></i>
-		</a>
+        <a href="callto:+919845339426" class="float-btn phone_float">
+            <i class="fa fa-phone float-icon"></i>
+        </a>
 
-        <a href="mailto:" class="email_float">
-			<i class="fa fa-envelope whatsapp-icon"></i>
-		</a>
+        <a href="mailto:" class="float-btn email_float">
+            <i class="fa fa-envelope float-icon"></i>
+        </a>
     </div>
 
 
@@ -1262,6 +1550,169 @@ h4 {
             $("#modaltitle").html("Payment Plan Options");
         });
     </script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        // Debug log
+        console.log("Document ready");
+        
+        // Initialize both carousels with debugging
+        try {
+            const carouselOptions = {
+                loop: true,
+                margin: 0,
+                nav: true,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true,
+                items: 1,
+                navText: [
+                    "<i class='fa fa-angle-left'></i>",
+                    "<i class='fa fa-angle-right'></i>"
+                ],
+                onInitialized: function() {
+                    console.log('Carousel initialized');
+                }
+            };
+
+            $('.desktop-slider').owlCarousel(carouselOptions);
+            $('.mobile-slider').owlCarousel(carouselOptions);
+            
+            // Debug viewport width
+            console.log('Viewport width:', $(window).width());
+            
+            // Check which slider is visible
+            console.log('Desktop slider display:', $('.desktop-slider').css('display'));
+            console.log('Mobile slider display:', $('.mobile-slider').css('display'));
+        } catch(e) {
+            console.error('Carousel initialization error:', e);
+        }
+    });
+
+    // Add resize listener for debugging
+    $(window).resize(function() {
+        console.log('Window resized. New width:', $(window).width());
+        console.log('Desktop slider display:', $('.desktop-slider').css('display'));
+        console.log('Mobile slider display:', $('.mobile-slider').css('display'));
+    });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script>
+    function showForm() {
+        document.getElementById('popupForm').style.display = 'flex';
+    }
+
+    function closeForm() {
+        document.getElementById('popupForm').style.display = 'none';
+    }
+
+    function submitForm(event) {
+        event.preventDefault();
+        // Handle form submission here
+        document.getElementById('popupForm').style.display = 'none';
+        document.getElementById('masterPlanImage').style.filter = 'none';
+        document.getElementById('imageOverlay').style.display = 'none';
+    }
+
+    function sendWhatsApp() {
+        // Add your WhatsApp functionality here
+        window.open('https://wa.me/919845339426', '_blank');
+    }
+    </script>
+    <script src="js/custom.js"></script>
+
+    <!-- Add this popup structure right before the closing body tag
+    <div class="unit-plan-popup" id="unitPlanPopup" style="display: none;">
+        <div class="popup-content">
+            <span class="popup-close">&times;</span>
+            <h3>Enter Details to View Floor Plan</h3>
+            <form id="submit-form" method="POST" autocomplete="on">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="from-box">
+                            <input type="text" name="name" id="name" placeholder="Your Name" autocomplete="name" required>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="from-box">
+                            <input type="email" name="email" id="email" placeholder="Your Email" autocomplete="email" required>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="from-box">
+                            <input type="tel" name="phone" id="phone" placeholder="Phone Number" autocomplete="tel" pattern="[0-9]{10}" required>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="from-box">
+                            <select name="bhk_type" id="bhk_type" autocomplete="off" required>
+                                <option value="">Select BHK Type</option>
+                                <option value="2bhk">2 BHK</option>
+                                <option value="3bhk">3 BHK</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="contact-button d-flex justify-content-between">
+                            <button type="submit" id="submit-button" class="bgBlack list">Send Message</button>
+                            <a href="#" id="whatsapp-link" class="bgBlack list px-5" onclick="sendWhatsApp(); return false;">
+                                <i class="fa fa-whatsapp whatsapp-icon whtIcon"></i> WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div> -->
+
+    <!-- Shared Popup Form
+    <div class="shared-plan-popup" id="sharedPlanPopup" style="display: none;">
+        <div class="popup-content">
+            <span class="popup-close">&times;</span>
+            <h3>Enter Details to View Floor Plan</h3>
+            <form id="shared-form" method="POST" autocomplete="on">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="from-box">
+                            <input type="text" name="name" id="name" placeholder="Your Name" autocomplete="name" required>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="from-box">
+                            <input type="email" name="email" id="email" placeholder="Your Email" autocomplete="email" required>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="from-box">
+                            <input type="tel" name="phone" id="phone" placeholder="Phone Number" autocomplete="tel" pattern="[0-9]{10}" required>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="from-box">
+                            <select name="bhk_type" id="bhk_type" autocomplete="off" required>
+                                <option value="">Select BHK Type</option>
+                                <option value="2bhk">2 BHK</option>
+                                <option value="3bhk">3 BHK</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="contact-button d-flex justify-content-between">
+                            <button type="submit" id="submit-button" class="bgBlack list">Send Message</button>
+                            <a href="#" id="whatsapp-link" class="bgBlack list px-5" onclick="sendWhatsApp(); return false;">
+                                <i class="fa fa-whatsapp whatsapp-icon whtIcon"></i> WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div> -->
 </body>
 
 </html>
