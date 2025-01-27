@@ -19,7 +19,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('submit-form');
     const imageOverlay = document.getElementById('imageOverlay');
     const localStorageKey = 'masterPlanFormSubmitted';
-    const popupAutoCloseTimer = 15000; // 15 seconds
+    const popupDelay = 20000; // 20 seconds
+    const popupAutoCloseTimer = 15000; // Auto-close popup after 15 seconds
     let autoCloseTimeout;
 
     // Add click event to the master plan image
@@ -54,13 +55,15 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Automatically show popup on page load
+    // Automatically show popup after 20 seconds on page load
     function showPopupOnLoad() {
         if (!localStorage.getItem(localStorageKey)) {
-            showUnitPlanPopup();
-            autoCloseTimeout = setTimeout(() => {
-                hideUnitPlanPopup(); // Auto-close the popup after 15 seconds
-            }, popupAutoCloseTimer);
+            setTimeout(() => {
+                showUnitPlanPopup();
+                autoCloseTimeout = setTimeout(() => {
+                    hideUnitPlanPopup(); // Auto-close the popup after 15 seconds
+                }, popupAutoCloseTimer);
+            }, popupDelay);
         }
     }
 
@@ -71,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
             imageOverlay.style.display = 'none';
         }
     } else {
-        // Show popup on page load if form not submitted
+        // Show popup after 20 seconds if form not submitted
         showPopupOnLoad();
     }
 

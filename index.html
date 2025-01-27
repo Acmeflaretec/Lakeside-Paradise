@@ -50,7 +50,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="headerTop">
         <div class="container">
 
-            <div class="phone"><a href="callto:+919845339426"><i class="fas fa-phone"></i> +91 9845339426</a></div>
+            <div class="phone"><a href="callto:+916362285975"><i class="fas fa-phone"></i> +91 6362285975</a></div>
 
             <div class="rightBox">
                 <div class="whatsapp">
@@ -738,15 +738,7 @@ h4 {
                         <input type="text" name="phone" id="phone" placeholder="Phone Number" required>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                    <div class="from-box">
-                        <select name="bhk_type" id="bhk_type" required>
-                            <option value="">Select BHK Type</option>
-                            <option value="2bhk">2 BHK</option>
-                            <option value="3bhk">3 BHK</option>
-                        </select>
-                    </div>
-                </div>
+                
                 <div class="col-lg-12 col-md-12 col-sm-12">
                     <div class="contact-button d-flex justify-content-between">
                         <button type="submit" id="submit-button" class="bgBlack list">Send Message</button>
@@ -1366,15 +1358,7 @@ h4 {
                                         <input type="text" name="phone" id="phone" placeholder="Phone Number" required>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12">
-                                    <div class="from-box">
-                                        <select name="bhk_type" id="bhk_type" required>
-                                            <option value="">Select BHK Type</option>
-                                            <option value="2bhk">2 BHK</option>
-                                            <option value="3bhk">3 BHK</option>
-                                        </select>
-                                    </div>
-                                </div>
+                                
                                 <div class="col-lg-12 col-md-12 col-sm-12">
                                     <div class="contact-button d-flex justify-content-between">
                                         <button type="submit" id="submit-button" class="bgBlack list">Send Message</button>
@@ -1446,11 +1430,11 @@ h4 {
             <i class="fa fa-whatsapp float-icon" style="margin-top: 10px;"></i>
         </a>
 
-        <a href="callto:+919845339426" class="float-btn phone_float">
+        <a href="callto:+916362285975" class="float-btn phone_float">
             <i class="fa fa-phone float-icon"></i>
         </a>
 
-        <a href="mailto:" class="float-btn email_float">
+        <a href="mailto:srkkhond1@gmail.com" class="float-btn email_float">
             <i class="fa fa-envelope float-icon"></i>
         </a>
     </div>
@@ -1516,6 +1500,39 @@ h4 {
         };
     </script> -->
     
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const buttons = document.querySelectorAll(".plan-btn");
+            const planContents = document.querySelectorAll(".plan-content");
+    
+            buttons.forEach(button => {
+                button.addEventListener("click", () => {
+                    // Remove the active class from all buttons
+                    buttons.forEach(btn => btn.classList.remove("active"));
+    
+                    // Add the active class to the clicked button
+                    button.classList.add("active");
+    
+                    // Get the data attributes of the clicked button
+                    const group = button.getAttribute("data-group");
+                    const id = button.getAttribute("data-id");
+    
+                    // Remove the active class from all plan contents
+                    planContents.forEach(content => {
+                        if (content.getAttribute("data-group") === group) {
+                            content.classList.remove("active");
+                        }
+                    });
+    
+                    // Add the active class to the corresponding plan content
+                    const targetContent = document.querySelector(`.plan-content[data-group="${group}"][data-id="${id}"]`);
+                    if (targetContent) {
+                        targetContent.classList.add("active");
+                    }
+                });
+            });
+        });
+    </script>
     
     <script>
         $(window).on('scroll', function() {
