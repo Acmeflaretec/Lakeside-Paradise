@@ -57,7 +57,7 @@ function handleFormSubmission(formElement, isPopup = false) {
 
     // Submit form data via AJAX
     $.ajax({
-        url: "https://script.google.com/macros/s/AKfycbzCfRpn3cV4ryQXWFAwr_gzpjsr6-S4sRC-gYBeJvu-eEXNxQfXS6K8WzHt8zsOABy_wA/exec",
+        url: "https://script.google.com/macros/s/AKfycbxTMsg0jYIPApi0kj6KKGo0fyuya-939CEqWJBqd_dLjh5UXqxfIjLNDzxZ0gyYDDeI8w/exec",
         data: $(formElement).serialize(),
         method: "POST",
         success: function (response) {
