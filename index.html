@@ -646,13 +646,8 @@ h4 {
                 <!-- Right Content -->
                 <div class="col-lg-6">
                     <div class="about-content wow fadeInRight" data-wow-delay="0.4s">
-<<<<<<< HEAD
                         <p class="about-description">
-                             Ajmera Marina, a premium residential development by Ajmera Group, is located in Yelahanka, Bengaluru. This exquisite project offers a grand clubhouse with panoramic views of the serene lake and the city skyline. Designed to provide a lifestyle of luxury and comfort, Ajmera Ajmera Marina boasts finest amenities, including a spa, health club, salon, guest rooms, and a swimming pool. The spacious homes feature contemporary designs with floor-to-ceiling windows, flooding interiors with natural light while offering breathtaking lake views. Surrounded by lush green landscapes and parks, it offers an ideal living environment for nature enthusiasts.
-=======
-                        <p style="text-align: justify;" class="about-description">
-                            Ajmera Lakeside Paradise, a premium residential development by Ajmera Group, is located in Yelahanka, Bengaluru. This exquisite project offers a grand clubhouse with panoramic views of the serene lake and the city skyline. Designed to provide a lifestyle of luxury and comfort, Ajmera Lakeside Paradise boasts finest amenities, including a spa, health club, salon, guest rooms, and a swimming pool. The spacious homes feature contemporary designs with floor-to-ceiling windows, flooding interiors with natural light while offering breathtaking lake views. Surrounded by lush green landscapes and parks, it offers an ideal living environment for nature enthusiasts.
->>>>>>> 95b212a93c9be6e867fee073d98ab9fac22cb34e
+                             Ajmera Marina, a premium residential development by Ajmera Group, is located in Yelahanka, Bengaluru. This exquisite project offers a grand clubhouse with panoramic views of the serene lake and the city skyline. Designed to provide a lifestyle of luxury and comfort, Ajmera Marina boasts finest amenities, including a spa, health club, salon, guest rooms, and a swimming pool. The spacious homes feature contemporary designs with floor-to-ceiling windows, flooding interiors with natural light while offering breathtaking lake views. Surrounded by lush green landscapes and parks, it offers an ideal living environment for nature enthusiasts.
                         </p>
                     </div>
                 </div>
@@ -757,6 +752,7 @@ h4 {
     </div>
 </div>
 
+
 <!-- Unit Plans Section -->
 <div class="unit-plan-section pt-90 pb-65" id="UnitPlan2">
     <div class="container">
@@ -812,19 +808,39 @@ h4 {
             <div class="col-lg-8 col-md-12">
                 <div class="plan-display responsive-margin">
                     <div class="plan-content active" data-group="2" data-id="0">
-                        <img src="images/floorPlan/3 B 1.jpg" class="responsive-image" alt="3 BHK Series 1">
+                        <div class="portfolio-image">
+                            <img src="images/floorPlan/3 B 1.jpg" class="responsive-image blur-image" alt="3 BHK Series 1">
+                            <div class="image-overlay">
+                                <div class="view-text">Click to View</div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="plan-content" data-group="2" data-id="1">
-                        <img src="images/floorPlan/3 B 2.jpg" class="responsive-image" alt="3 BHK Series 2">
+                        <div class="portfolio-image">
+                            <img src="images/floorPlan/3 B 2.jpg" class="responsive-image blur-image" alt="3 BHK Series 2">
+                            <div class="image-overlay">
+                                <div class="view-text">Click to View</div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="plan-content" data-group="2" data-id="2">
-                        <img src="images/floorPlan/3 B 3.jpg" class="responsive-image" alt="3 BHK Series 3">
+                        <div class="portfolio-image">
+                            <img src="images/floorPlan/3 B 3.jpg" class="responsive-image blur-image" alt="3 BHK Series 3">
+                            <div class="image-overlay">
+                                <div class="view-text">Click to View</div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="plan-content" data-group="2" data-id="3">
-                        <img src="images/floorPlan/2 B 4.jpg" class="responsive-image" alt="2 BHK Series 4">
+                        <div class="portfolio-image">
+                            <img src="images/floorPlan/2 B 4.jpg" class="responsive-image blur-image" alt="2 BHK Series 4">
+                            <div class="image-overlay">
+                                <div class="view-text">Click to View</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1672,6 +1688,60 @@ h4 {
     }
     </script>
     <script src="js/custom.js"></script>
+
+    <script>
+    // Add this JavaScript code after your existing scripts
+    document.addEventListener("DOMContentLoaded", function() {
+        // Handle Unit Plan image clicks
+        document.querySelectorAll('.unit-plan-section .portfolio-image').forEach(imageContainer => {
+            imageContainer.addEventListener('click', function() {
+                if (this.querySelector('img').classList.contains('blur-image')) {
+                    showUnitPlanPopup();
+                }
+            });
+        });
+
+        // Handle form submission for both sections
+        document.getElementById('submit-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Unblur all images in both sections
+            document.querySelectorAll('.blur-image').forEach(img => {
+                img.classList.remove('blur-image');
+            });
+            
+            // Hide all overlays
+            document.querySelectorAll('.image-overlay').forEach(overlay => {
+                overlay.classList.add('hidden');
+            });
+
+            // Hide popup
+            hideUnitPlanPopup();
+            
+            // Store submission in localStorage
+            localStorage.setItem('formSubmitted', 'true');
+        });
+
+        // Check if form was previously submitted
+        if(localStorage.getItem('formSubmitted') === 'true') {
+            document.querySelectorAll('.blur-image').forEach(img => {
+                img.classList.remove('blur-image');
+            });
+            document.querySelectorAll('.image-overlay').forEach(overlay => {
+                overlay.classList.add('hidden');
+            });
+        }
+    });
+
+    // Existing functions (keep these as they are)
+    function showUnitPlanPopup() {
+        document.getElementById('unitPlanPopup').classList.add('show');
+    }
+
+    function hideUnitPlanPopup() {
+        document.getElementById('unitPlanPopup').classList.remove('show');
+    }
+    </script>
 
    
 </body>
