@@ -71,13 +71,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="row align-items-center">
                 <div class="col-lg-3">
                     <div class="logo">
-                        <a class="logo_img" href="#" title="">
-							<img src="images/logo.png" alt="" />
-						</a>
-                        <a class="main_sticky" href="#" title="">
-							<img src="images/logo.png" alt="" />
-						</a>
+                        <a class="logo_img" href="#" title="Ajmera Marina">
+                            <img src="images/dev-logos.png" alt="Ajmera Marina" />
+                            <span class="logo-text">Ajmera Marina</span>
+                        </a>
                     </div>
+                    
                 </div>
                 <div class="col-lg-9">
                     <nav class="dreamit_menu">
@@ -105,9 +104,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="mobile-menu-area d-sm-block d-md-block d-lg-none ">
 
         <div class="mobile-menu">
-            <div class="main_sticky_mobile" href="#" title="">
-                <img src="images/logo.png" alt="" />
+            <div class="main_sticky_mobile">
+                <img src="images/dev-logo.png" alt="Ajmera Marina" />
+                <span class="logo-text">AJMERA MARINA</span>
             </div>
+            
 
             <nav class="dreamit_menu">
 
@@ -128,6 +129,69 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <style>
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between logo and text */
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo_img img {
+    height: 50px;
+    background: none; /* No background */
+}
+
+.logo-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: white; /* White text */
+    text-transform: uppercase;
+    margin-left: 5px; /* Adjust spacing */
+}
+
+/* Default styling for the logo container */
+.main_sticky_mobile {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between logo and text */
+}
+
+/* Logo styling */
+.main_sticky_mobile img {
+    height: 50px; /* Adjust size for mobile */
+    width: 50px;
+}
+
+/* Text styling */
+.logo-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    line-height: 1.2; /* Adjust spacing between "Ajmera" and "Marina" */
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .main_sticky_mobile {
+        justify-content: center; /* Center the logo and text */
+    }
+
+    .main_sticky_mobile img {
+        height: 40px; /* Adjust size for mobile */
+        width: 40px;
+    }
+
+    .logo-text {
+        font-size: 16px; /* Slightly smaller font for mobile */
+    }
+}
+
         .slider-area {
     position: relative;
     height: 750px;
@@ -1163,7 +1227,7 @@ h4 {
                     <div class="about-text">
                         <p class="subtitle">LUXURY LIVING IN THE HEART OF BENGALURU</p>
                         <p style="text-align: justify;" class="description">
-                            Welcome to Ajmera Lakeside/Marina Phase I & II, a premium residential project in Yelahanka, Bengaluru. Developed by the renowned Ajmera Group with 60 years of excellence, this project offers exquisite 3-Bed residences starting from ₹1.40 Cr (all-inclusive).
+                            Welcome to Ajmera Lakeside/Marina Phase I & II, a premium residential project in Yelahanka, Bengaluru. Developed by the renowned Ajmera Group with 60 years of excellence, this project offers exquisite 3-Bed residences starting from ₹1.49 Cr (all-inclusive).
                         </p>
                         
                         <div class="features-section">
@@ -1184,7 +1248,7 @@ h4 {
                         </div>
 
                         <div class="features-section">
-                            <h3>WHY CHOOSE AJMERA LAKESIDE</h3>
+                            <h3>WHY CHOOSE AJMERA MARINA</h3>
                             <ul>
                                 <li>Premium 3-Bed residences with world-class amenities</li>
                                 <li>Stunning lake and city views</li>
@@ -1219,7 +1283,7 @@ h4 {
                     
                     <div class="price-box">
                         <div class="residence-type">🏡 3-Bed Residences</div>
-                        <div class="price">₹1.40 Cr <span>(All Inclusive)*</span></div>
+                        <div class="price">₹1.49 Cr <span>(All Inclusive)*</span></div>
                     </div>
                     
                     <div class="luxury-note">
@@ -1432,8 +1496,16 @@ h4 {
                                 </p>
                             </div>
                         </div>
+    
                         <div class="footer-bottom-content-copy">
                             <div class="row">
+                                <div class="col-12 text-center">
+                                    <p><strong>RERA No:</strong> PRM/KA/RERA/1251/309/PR/310125/007461</p>
+                                    <p><strong>Site Address:</strong> SY.7/1, 7/2, 7/3, 9/1, 9/2, 10; Kempanahalli Village</p>
+                                </div>
+                            </div>
+    
+                            <div class="row mt-3">
                                 <div class="col-lg-3 col-md-6 col-sm-12">
                                     <a class="logo_img" href="#" title="">
                                         <img src="images/dev-logo.png" alt="" class="dev"/>
@@ -1443,23 +1515,20 @@ h4 {
                                     <p class="text-center" style="margin-bottom: 5px;">
                                         Copyright © all rights reserved.
                                     </p>
-                                    <p class="text-center" style="color: #C19A5B; font-size: 14px; letter-spacing: 0.5px;">
-                                        Authorised Marketing Channel Partner
-                                    </p>
                                 </div>
                                 <div class="col-lg-3 col-md-6 col-sm-12">
                                     <a class="logo_img" href="https://www.acmeflare.in/" title="">
                                         <img src="images/company_logo.png" alt="" class="smart" />
                                     </a>
                                 </div>
-                            </div>
-                            
+                            </div>  
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    
     
 
     <a id="botup"></a>
