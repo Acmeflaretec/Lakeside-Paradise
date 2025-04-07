@@ -28,18 +28,20 @@ function unblurAllImages() {
     });
 }
 
-// Function to handle WhatsApp message
+// Enhanced WhatsApp message with more details
 function sendWhatsApp() {
     var name = document.getElementById("name").value;
     var email = document.getElementById("email").value;
     var phone = document.getElementById("phone").value;
-    var bhk_type = document.getElementById("bhk_type").value;
+    var bhk_type = document.getElementById("bhk_type") ? document.getElementById("bhk_type").value : "Not Specified";
+    var budget = document.getElementById("budget") ? document.getElementById("budget").value : "Not Specified";
 
     var message = "Lead%20Details:%0A" +
         "Name:%20" + encodeURIComponent(name) + "%0A" +
         "Email:%20" + encodeURIComponent(email) + "%0A" +
         "Phone:%20" + encodeURIComponent(phone) + "%0A" +
-        "BHK%20Type:%20" + encodeURIComponent(bhk_type);
+        "BHK%20Type:%20" + encodeURIComponent(bhk_type) + "%0A" +
+        "Budget:%20" + encodeURIComponent(budget);
 
     var whatsappLink = document.getElementById("whatsapp-link");
     whatsappLink.href = "https://wa.me/919845339426?text=" + message;

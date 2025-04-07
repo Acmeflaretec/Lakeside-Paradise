@@ -38,6 +38,9 @@ document.addEventListener('DOMContentLoaded', function () {
         form.addEventListener('submit', function (e) {
             e.preventDefault(); // Prevent the form from refreshing the page
 
+            // Use the unified form submission handler from EnquiryForm.js
+            handleFormSubmission(form, true);
+
             // Unblur the master plan image
             masterPlanImage.style.filter = 'none';
             masterPlanImage.style.transition = 'filter 0.5s ease';
